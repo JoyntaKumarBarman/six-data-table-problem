@@ -1,0 +1,378 @@
+{
+  "portfolio": {
+    "investor_id": "INV-7765",
+    "total_value": 487500.00,
+    "holdings": [
+      {
+        "asset_id": "ST-001",
+        "symbol": "AAPL",
+        "name": "Apple Inc.",
+        "transactions": [
+          {"date": "2023-01-15", "type": "BUY", "quantity": 100, "price": 143.25, "fee": 9.99},
+          {"date": "2023-07-10", "type": "BUY", "quantity": 50, "price": 167.80, "fee": 9.99},
+          {"date": "2024-02-20", "type": "SELL", "quantity": 40, "price": 188.40, "fee": 12.50}
+        ],
+        "current_price": 192.75,
+        "daily_change_percent": 1.25,
+        "volatility_30d": 0.85,
+        "portfolio_percentage": 4.2,
+        "high_conviction": false,
+        "total_cost_basis": 21504.98,
+        "realized_pl": 1787.70,
+        "unrealized_pl": 5431.80,
+        "sharpe_ratio": 24.47
+      },
+      {
+        "asset_id": "ST-002",
+        "symbol": "MSFT",
+        "name": "Microsoft Corporation",
+        "transactions": [
+          {"date": "2022-11-05", "type": "BUY", "quantity": 75, "price": 235.60, "fee": 9.99},
+          {"date": "2023-09-18", "type": "SELL", "quantity": 25, "price": 315.75, "fee": 12.50}
+        ],
+        "current_price": 405.20,
+        "daily_change_percent": -0.45,
+        "volatility_30d": 1.10,
+        "portfolio_percentage": 6.1,
+        "high_conviction": true,
+        "total_cost_basis": 17679.99,
+        "realized_pl": 1953.25,
+        "unrealized_pl": 10130.00,
+        "sharpe_ratio": 18.91
+      },
+      {
+        "asset_id": "ST-003",
+        "symbol": "TSLA",
+        "name": "Tesla Inc.",
+        "transactions": [
+          {"date": "2023-03-22", "type": "BUY", "quantity": 60, "price": 185.30, "fee": 9.99},
+          {"date": "2023-12-05", "type": "BUY", "quantity": 40, "price": 210.50, "fee": 9.99}
+        ],
+        "current_price": 175.80,
+        "daily_change_percent": 2.80,
+        "volatility_30d": 2.35,
+        "portfolio_percentage": 3.5,
+        "high_conviction": false,
+        "total_cost_basis": 19369.98,
+        "realized_pl": 0,
+        "unrealized_pl": -1730.00,
+        "sharpe_ratio": -1.02
+      },
+      {
+        "asset_id": "ST-004",
+        "symbol": "NVDA",
+        "name": "NVIDIA Corporation",
+        "transactions": [
+          {"date": "2023-05-10", "type": "BUY", "quantity": 30, "price": 285.40, "fee": 9.99},
+          {"date": "2024-01-15", "type": "SELL", "quantity": 10, "price": 495.75, "fee": 12.50}
+        ],
+        "current_price": 720.50,
+        "daily_change_percent": 3.20,
+        "volatility_30d": 1.75,
+        "portfolio_percentage": 7.8,
+        "high_conviction": true,
+        "total_cost_basis": 8662.99,
+        "realized_pl": 2077.50,
+        "unrealized_pl": 8720.00,
+        "sharpe_ratio": 41.31
+      },
+      {
+        "asset_id": "ST-005",
+        "symbol": "GOOGL",
+        "name": "Alphabet Inc.",
+        "transactions": [
+          {"date": "2022-08-12", "type": "BUY", "quantity": 45, "price": 112.80, "fee": 9.99},
+          {"date": "2023-06-20", "type": "BUY", "quantity": 25, "price": 118.40, "fee": 9.99}
+        ],
+        "current_price": 142.30,
+        "daily_change_percent": -0.30,
+        "volatility_30d": 0.95,
+        "portfolio_percentage": 2.2,
+        "high_conviction": false,
+        "total_cost_basis": 8129.98,
+        "realized_pl": 0,
+        "unrealized_pl": 2135.00,
+        "sharpe_ratio": 12.74
+      },
+      {
+        "asset_id": "ST-006",
+        "symbol": "AMZN",
+        "name": "Amazon.com Inc.",
+        "transactions": [
+          {"date": "2023-02-14", "type": "BUY", "quantity": 80, "price": 95.60, "fee": 9.99},
+          {"date": "2023-11-30", "type": "SELL", "quantity": 20, "price": 145.25, "fee": 12.50}
+        ],
+        "current_price": 168.40,
+        "daily_change_percent": 1.10,
+        "volatility_30d": 1.25,
+        "portfolio_percentage": 5.5,
+        "high_conviction": true,
+        "total_cost_basis": 7649.99,
+        "realized_pl": 942.50,
+        "unrealized_pl": 10104.00,
+        "sharpe_ratio": 27.36
+      },
+      {
+        "asset_id": "ST-007",
+        "symbol": "META",
+        "name": "Meta Platforms Inc.",
+        "transactions": [
+          {"date": "2022-10-05", "type": "BUY", "quantity": 65, "price": 135.20, "fee": 9.99},
+          {"date": "2023-08-15", "type": "BUY", "quantity": 35, "price": 285.40, "fee": 9.99}
+        ],
+        "current_price": 465.25,
+        "daily_change_percent": 2.45,
+        "volatility_30d": 1.85,
+        "portfolio_percentage": 9.8,
+        "high_conviction": true,
+        "total_cost_basis": 20269.98,
+        "realized_pl": 0,
+        "unrealized_pl": 26325.00,
+        "sharpe_ratio": 49.81
+      },
+      {
+        "asset_id": "ST-008",
+        "symbol": "JPM",
+        "name": "JPMorgan Chase & Co.",
+        "transactions": [
+          {"date": "2023-04-18", "type": "BUY", "quantity": 120, "price": 135.60, "fee": 9.99},
+          {"date": "2024-01-05", "type": "SELL", "quantity": 30, "price": 168.75, "fee": 12.50}
+        ],
+        "current_price": 182.40,
+        "daily_change_percent": 0.75,
+        "volatility_30d": 0.65,
+        "portfolio_percentage": 8.2,
+        "high_conviction": true,
+        "total_cost_basis": 16279.99,
+        "realized_pl": 934.50,
+        "unrealized_pl": 5634.00,
+        "sharpe_ratio": 15.23
+      },
+      {
+        "asset_id": "ST-009",
+        "symbol": "V",
+        "name": "Visa Inc.",
+        "transactions": [
+          {"date": "2022-09-12", "type": "BUY", "quantity": 90, "price": 195.40, "fee": 9.99},
+          {"date": "2023-07-25", "type": "SELL", "quantity": 15, "price": 235.60, "fee": 12.50}
+        ],
+        "current_price": 275.80,
+        "daily_change_percent": -0.15,
+        "volatility_30d": 0.95,
+        "portfolio_percentage": 7.9,
+        "high_conviction": true,
+        "total_cost_basis": 17589.99,
+        "realized_pl": 573.50,
+        "unrealized_pl": 20685.00,
+        "sharpe_ratio": 28.53
+      },
+      {
+        "asset_id": "ST-010",
+        "symbol": "WMT",
+        "name": "Walmart Inc.",
+        "transactions": [
+          {"date": "2023-01-30", "type": "BUY", "quantity": 150, "price": 142.50, "fee": 9.99},
+          {"date": "2023-10-12", "type": "SELL", "quantity": 50, "price": 165.40, "fee": 12.50}
+        ],
+        "current_price": 175.60,
+        "daily_change_percent": 0.45,
+        "volatility_30d": 0.55,
+        "portfolio_percentage": 8.4,
+        "high_conviction": true,
+        "total_cost_basis": 21379.99,
+        "realized_pl": 1087.50,
+        "unrealized_pl": 17560.00,
+        "sharpe_ratio": 18.18
+      },
+      {
+        "asset_id": "ST-011",
+        "symbol": "MA",
+        "name": "Mastercard Incorporated",
+        "transactions": [
+          {"date": "2023-03-15", "type": "BUY", "quantity": 60, "price": 365.40, "fee": 9.99},
+          {"date": "2023-12-20", "type": "SELL", "quantity": 10, "price": 412.50, "fee": 12.50}
+        ],
+        "current_price": 445.60,
+        "daily_change_percent": 1.85,
+        "volatility_30d": 1.15,
+        "portfolio_percentage": 8.9,
+        "high_conviction": true,
+        "total_cost_basis": 21929.99,
+        "realized_pl": 451.00,
+        "unrealized_pl": 11260.00,
+        "sharpe_ratio": 38.26
+      },
+      {
+        "asset_id": "ST-012",
+        "symbol": "PG",
+        "name": "Procter & Gamble Company",
+        "transactions": [
+          {"date": "2022-12-05", "type": "BUY", "quantity": 100, "price": 145.60, "fee": 9.99},
+          {"date": "2023-09-08", "type": "BUY", "quantity": 50, "price": 152.30, "fee": 9.99}
+        ],
+        "current_price": 158.40,
+        "daily_change_percent": 0.25,
+        "volatility_30d": 0.45,
+        "portfolio_percentage": 6.0,
+        "high_conviction": false,
+        "total_cost_basis": 22179.98,
+        "realized_pl": 0,
+        "unrealized_pl": 375.00,
+        "sharpe_ratio": 3.16
+      },
+      {
+        "asset_id": "ST-013",
+        "symbol": "JNJ",
+        "name": "Johnson & Johnson",
+        "transactions": [
+          {"date": "2023-02-28", "type": "BUY", "quantity": 80, "price": 155.40, "fee": 9.99},
+          {"date": "2023-11-15", "type": "SELL", "quantity": 20, "price": 148.60, "fee": 12.50}
+        ],
+        "current_price": 162.50,
+        "daily_change_percent": -0.35,
+        "volatility_30d": 0.60,
+        "portfolio_percentage": 5.2,
+        "high_conviction": false,
+        "total_cost_basis": 12439.99,
+        "realized_pl": -156.50,
+        "unrealized_pl": 426.00,
+        "sharpe_ratio": 6.83
+      },
+      {
+        "asset_id": "ST-014",
+        "symbol": "HD",
+        "name": "Home Depot Inc.",
+        "transactions": [
+          {"date": "2023-01-10", "type": "BUY", "quantity": 70, "price": 315.40, "fee": 9.99},
+          {"date": "2023-08-22", "type": "SELL", "quantity": 20, "price": 335.60, "fee": 12.50}
+        ],
+        "current_price": 355.80,
+        "daily_change_percent": 1.15,
+        "volatility_30d": 1.05,
+        "portfolio_percentage": 9.2,
+        "high_conviction": true,
+        "total_cost_basis": 22089.99,
+        "realized_pl": 382.50,
+        "unrealized_pl": 7100.00,
+        "sharpe_ratio": 19.05
+      },
+      {
+        "asset_id": "ST-015",
+        "symbol": "DIS",
+        "name": "Walt Disney Company",
+        "transactions": [
+          {"date": "2023-05-20", "type": "BUY", "quantity": 120, "price": 85.40, "fee": 9.99},
+          {"date": "2024-01-10", "type": "SELL", "quantity": 30, "price": 92.50, "fee": 12.50}
+        ],
+        "current_price": 105.60,
+        "daily_change_percent": 2.85,
+        "volatility_30d": 1.65,
+        "portfolio_percentage": 4.0,
+        "high_conviction": false,
+        "total_cost_basis": 10249.99,
+        "realized_pl": 183.00,
+        "unrealized_pl": 2430.00,
+        "sharpe_ratio": 14.85
+      },
+      {
+        "asset_id": "ST-016",
+        "symbol": "BAC",
+        "name": "Bank of America Corporation",
+        "transactions": [
+          {"date": "2023-03-05", "type": "BUY", "quantity": 250, "price": 32.60, "fee": 9.99},
+          {"date": "2023-10-18", "type": "SELL", "quantity": 50, "price": 28.40, "fee": 12.50}
+        ],
+        "current_price": 35.80,
+        "daily_change_percent": 0.85,
+        "volatility_30d": 1.35,
+        "portfolio_percentage": 3.5,
+        "high_conviction": false,
+        "total_cost_basis": 8159.99,
+        "realized_pl": -230.50,
+        "unrealized_pl": 1790.00,
+        "sharpe_ratio": 8.59
+      },
+      {
+        "asset_id": "ST-017",
+        "symbol": "KO",
+        "name": "Coca-Cola Company",
+        "transactions": [
+          {"date": "2022-11-20", "type": "BUY", "quantity": 150, "price": 58.40, "fee": 9.99},
+          {"date": "2023-07-15", "type": "SELL", "quantity": 30, "price": 62.50, "fee": 12.50}
+        ],
+        "current_price": 60.80,
+        "daily_change_percent": 0.15,
+        "volatility_30d": 0.40,
+        "portfolio_percentage": 3.6,
+        "high_conviction": false,
+        "total_cost_basis": 8769.99,
+        "realized_pl": 103.00,
+        "unrealized_pl": 360.00,
+        "sharpe_ratio": 4.25
+      },
+      {
+        "asset_id": "ST-018",
+        "symbol": "PEP",
+        "name": "PepsiCo Inc.",
+        "transactions": [
+          {"date": "2023-02-10", "type": "BUY", "quantity": 100, "price": 175.40, "fee": 9.99},
+          {"date": "2023-09-28", "type": "SELL", "quantity": 20, "price": 165.60, "fee": 12.50}
+        ],
+        "current_price": 185.80,
+        "daily_change_percent": -0.25,
+        "volatility_30d": 0.75,
+        "portfolio_percentage": 5.9,
+        "high_conviction": false,
+        "total_cost_basis": 17509.99,
+        "realized_pl": -216.50,
+        "unrealized_pl": 1488.00,
+        "sharpe_ratio": 9.87
+      },
+      {
+        "asset_id": "ST-019",
+        "symbol": "XOM",
+        "name": "Exxon Mobil Corporation",
+        "transactions": [
+          {"date": "2023-04-05", "type": "BUY", "quantity": 80, "price": 105.40, "fee": 9.99},
+          {"date": "2023-12-15", "type": "SELL", "quantity": 20, "price": 115.60, "fee": 12.50}
+        ],
+        "current_price": 125.80,
+        "daily_change_percent": 1.45,
+        "volatility_30d": 1.25,
+        "portfolio_percentage": 4.1,
+        "high_conviction": false,
+        "total_cost_basis": 8429.99,
+        "realized_pl": 192.50,
+        "unrealized_pl": 1620.00,
+        "sharpe_ratio": 16.48
+      },
+      {
+        "asset_id": "ST-020",
+        "symbol": "CSCO",
+        "name": "Cisco Systems Inc.",
+        "transactions": [
+          {"date": "2023-01-25", "type": "BUY", "quantity": 200, "price": 45.60, "fee": 9.99},
+          {"date": "2023-08-10", "type": "SELL", "quantity": 50, "price": 52.40, "fee": 12.50}
+        ],
+        "current_price": 48.80,
+        "daily_change_percent": -0.65,
+        "volatility_30d": 0.85,
+        "portfolio_percentage": 3.8,
+        "high_conviction": false,
+        "total_cost_basis": 9129.99,
+        "realized_pl": 320.50,
+        "unrealized_pl": -300.00,
+        "sharpe_ratio": 2.82
+      }
+    ],
+    "benchmarks": {
+      "sp500_return": 14.3,
+      "risk_free_rate": 4.2
+    },
+    "metrics": {
+      "total_return": 18.7,
+      "portfolio_volatility": 1.25,
+      "sharpe_ratio": 11.6
+    }
+  }
+}

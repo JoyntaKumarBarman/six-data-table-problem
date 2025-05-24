@@ -121,6 +121,7 @@ export default function FirstProblemDataTable() {
                        expandedRows={expandedRows} onRowToggle={(e) => setExpandedRows(e.data)}
                        rowExpansionTemplate={rowExpansionTemplate}
                        rows={10}
+                       paginator
             >
                 <Column expander={true} style={{width: '1rem'}}/>
                 <Column field="name" header="Product Name" style={{minWidth: '12rem'}}/>

@@ -20,6 +20,45 @@
                     "name": "Cloud Migration",
                     "status": "Behind Schedule",
                     "completion": 65
+                  },{
+                    "project_id": "P-2024-01",
+                    "name": "Cloud Migration",
+                    "status": "Behind Schedule",
+                    "completion": 65
+                  }
+                ]
+              },
+              {
+                "employee_id": "E-1001",
+                "name": "Sarah Johnson",
+                "role": "Network Engineer",
+                "skills": ["AWS", "Cisco", "Python"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-01",
+                    "name": "Cloud Migration",
+                    "status": "Behind Schedule",
+                    "completion": 10
+                  }
+                ]
+              }
+            ],
+            "budget": 250000
+          },
+          {
+            "team_id": "T-INFRN",
+            "members": [
+              {
+                "employee_id": "E-1001",
+                "name": "Sarah Johnson",
+                "role": "Network Engineer",
+                "skills": ["AWS", "Cisco", "Python"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-01",
+                    "name": "Cloud Migration",
+                    "status": "Behind Schedule",
+                    "completion": 65
                   }
                 ]
               }
