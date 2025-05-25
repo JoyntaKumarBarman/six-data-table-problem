@@ -1,0 +1,519 @@
+{
+  "inventory": {
+    "products": [
+      {
+        "sku": "PROD-001",
+        "name": "Wireless Headphones",
+        "category": "Electronics",
+        "supplier": {
+          "id": "SUPP-13",
+          "name": "Gamer's Hub",
+          "rating": 4.9
+        },
+        "variants": [
+          {
+            "color": "White",
+            "price": 130.85,
+            "stock": 65,
+            "discount": null
+          }
+        ],
+        "reviews": {
+          "average": 3.7,
+          "count": 117
+        },
+        "status": "Active"
+      },
+      {
+        "sku": "PROD-002",
+        "name": "Smart Fitness Watch",
+        "category": "Wearables",
+        "supplier": {
+          "id": "SUPP-07",
+          "name": "SoundWave Co.",
+          "rating": 4.2
+        },
+        "variants": [
+          {
+            "color": "Grey",
+            "price": 249.68,
+            "stock": 29,
+            "discount": {
+              "type": "percentage",
+              "value": 5
+            }
+          },
+          {
+            "color": "red",
+            "price": 249.68,
+            "stock": 29,
+            "discount": {
+              "type": "percentage",
+              "value": 5
+            }
+          }
+        ],
+        "reviews": {
+          "average": 4.2,
+          "count": 99
+        },
+        "status": "Low Stock"
+      },
+      {
+        "sku": "PROD-003",
+        "name": "Bluetooth Speaker",
+        "category": "Audio",
+        "supplier": {
+          "id": "SUPP-14",
+          "name": "AudioNest",
+          "rating": 4.7
+        },
+        "variants": [
+          {
+            "color": "Red",
+            "price": 284.44,
+            "stock": 16,
+            "discount": {
+              "type": "percentage",
+              "value": 17
+            }
+          }
+        ],
+        "reviews": {
+          "average": 4.2,
+          "count": 140
+        },
+        "status": "Low Stock"
+      },
+      {
+        "sku": "PROD-004",
+        "name": "Ergonomic Office Chair",
+        "category": "Furniture",
+        "supplier": {
+          "id": "SUPP-11",
+          "name": "FitCore Supplies",
+          "rating": 4.6
+        },
+        "variants": [
+          {
+            "color": "Grey",
+            "price": 67.85,
+            "stock": 63,
+            "discount": {
+              "type": "flat",
+              "value": 14
+            }
+          }
+        ],
+        "reviews": {
+          "average": 4.6,
+          "count": 95
+        },
+        "status": "Active"
+      },
+      {
+        "sku": "PROD-005",
+        "name": "Gaming Mouse",
+        "category": "Accessories",
+        "supplier": {
+          "id": "SUPP-04",
+          "name": "GadgetZone",
+          "rating": 4.3
+        },
+        "variants": [
+          {
+            "color": "Blue",
+            "price": 112.33,
+            "stock": 10,
+            "discount": {
+              "type": "percentage",
+              "value": 15
+            }
+          }
+        ],
+        "reviews": {
+          "average": 4.4,
+          "count": 267
+        },
+        "status": "Low Stock"
+      },
+      {
+        "sku": "PROD-006",
+        "name": "Laptop Stand",
+        "category": "Accessories",
+        "supplier": {
+          "id": "SUPP-08",
+          "name": "Storage Solutions",
+          "rating": 4.6
+        },
+        "variants": [
+          {
+            "color": "Black",
+            "price": 73.13,
+            "stock": 61,
+            "discount": {
+              "type": "flat",
+              "value": 18
+            }
+          }
+        ],
+        "reviews": {
+          "average": 4.9,
+          "count": 182
+        },
+        "status": "Active"
+      },
+      {
+        "sku": "PROD-007",
+        "name": "4K Monitor 27\"",
+        "category": "Electronics",
+        "supplier": {
+          "id": "SUPP-02",
+          "name": "Comfort Interiors",
+          "rating": 4.7
+        },
+        "variants": [
+          {
+            "color": "Grey",
+            "price": 163.21,
+            "stock": 51,
+            "discount": null
+          }
+        ],
+        "reviews": {
+          "average": 4.6,
+          "count": 83
+        },
+        "status": "Active"
+      },
+      {
+        "sku": "PROD-008",
+        "name": "Portable SSD 1TB",
+        "category": "Storage",
+        "supplier": {
+          "id": "SUPP-14",
+          "name": "AudioNest",
+          "rating": 4.7
+        },
+        "variants": [
+          {
+            "color": "Silver",
+            "price": 274.4,
+            "stock": 9,
+            "discount": {
+              "type": "percentage",
+              "value": 5
+            }
+          }
+        ],
+        "reviews": {
+          "average": 4.5,
+          "count": 179
+        },
+        "status": "Low Stock"
+      },
+      {
+        "sku": "PROD-009",
+        "name": "Mechanical Keyboard",
+        "category": "Accessories",
+        "supplier": {
+          "id": "SUPP-09",
+          "name": "PixelGear",
+          "rating": 4.4
+        },
+        "variants": [
+          {
+            "color": "Black",
+            "price": 50.62,
+            "stock": 50,
+            "discount": {
+              "type": "flat",
+              "value": 17
+            }
+          }
+        ],
+        "reviews": {
+          "average": 4.2,
+          "count": 84
+        },
+        "status": "Active"
+      },
+      {
+        "sku": "PROD-010",
+        "name": "Noise Cancelling Earbuds",
+        "category": "Audio",
+        "supplier": {
+          "id": "SUPP-02",
+          "name": "Comfort Interiors",
+          "rating": 4.7
+        },
+        "variants": [
+          {
+            "color": "Red",
+            "price": 113.46,
+            "stock": 54,
+            "discount": {
+              "type": "percentage",
+              "value": 8
+            }
+          }
+        ],
+        "reviews": {
+          "average": 3.7,
+          "count": 275
+        },
+        "status": "Active"
+      },
+      {
+        "sku": "PROD-011",
+        "name": "Smart LED Bulb",
+        "category": "Home",
+        "supplier": {
+          "id": "SUPP-03",
+          "name": "DeskTech",
+          "rating": 4.4
+        },
+        "variants": [
+          {
+            "color": "Black",
+            "price": 143.11,
+            "stock": 54,
+            "discount": {
+              "type": "percentage",
+              "value": 10
+            }
+          }
+        ],
+        "reviews": {
+          "average": 4.5,
+          "count": 119
+        },
+        "status": "Active"
+      },
+      {
+        "sku": "PROD-012",
+        "name": "USB-C Hub",
+        "category": "Accessories",
+        "supplier": {
+          "id": "SUPP-12",
+          "name": "EcoGears",
+          "rating": 4.1
+        },
+        "variants": [
+          {
+            "color": "Silver",
+            "price": 147.64,
+            "stock": 73,
+            "discount": {
+              "type": "flat",
+              "value": 20
+            }
+          }
+        ],
+        "reviews": {
+          "average": 4.4,
+          "count": 201
+        },
+        "status": "Active"
+      },
+      {
+        "sku": "PROD-013",
+        "name": "Wireless Charger",
+        "category": "Electronics",
+        "supplier": {
+          "id": "SUPP-02",
+          "name": "Comfort Interiors",
+          "rating": 4.7
+        },
+        "variants": [
+          {
+            "color": "Grey",
+            "price": 220.31,
+            "stock": 25,
+            "discount": null
+          }
+        ],
+        "reviews": {
+          "average": 4.1,
+          "count": 131
+        },
+        "status": "Low Stock"
+      },
+      {
+        "sku": "PROD-014",
+        "name": "Streaming Webcam",
+        "category": "Electronics",
+        "supplier": {
+          "id": "SUPP-13",
+          "name": "Gamer's Hub",
+          "rating": 4.9
+        },
+        "variants": [
+          {
+            "color": "Black",
+            "price": 127.96,
+            "stock": 11,
+            "discount": null
+          }
+        ],
+        "reviews": {
+          "average": 4.4,
+          "count": 280
+        },
+        "status": "Low Stock"
+      },
+      {
+        "sku": "PROD-015",
+        "name": "Tablet Stand",
+        "category": "Accessories",
+        "supplier": {
+          "id": "SUPP-05",
+          "name": "TechGlobal Inc.",
+          "rating": 4.8
+        },
+        "variants": [
+          {
+            "color": "Black",
+            "price": 40.49,
+            "stock": 72,
+            "discount": {
+              "type": "flat",
+              "value": 20
+            }
+          }
+        ],
+        "reviews": {
+          "average": 4.2,
+          "count": 77
+        },
+        "status": "Active"
+      },
+      {
+        "sku": "PROD-016",
+        "name": "Smart Plug",
+        "category": "Home",
+        "supplier": {
+          "id": "SUPP-04",
+          "name": "GadgetZone",
+          "rating": 4.3
+        },
+        "variants": [
+          {
+            "color": "White",
+            "price": 69.53,
+            "stock": 43,
+            "discount": {
+              "type": "flat",
+              "value": 20
+            }
+          }
+        ],
+        "reviews": {
+          "average": 3.8,
+          "count": 204
+        },
+        "status": "Active"
+      },
+      {
+        "sku": "PROD-017",
+        "name": "Router AX1800",
+        "category": "Networking",
+        "supplier": {
+          "id": "SUPP-09",
+          "name": "PixelGear",
+          "rating": 4.4
+        },
+        "variants": [
+          {
+            "color": "Silver",
+            "price": 201.16,
+            "stock": 50,
+            "discount": {
+              "type": "flat",
+              "value": 20
+            }
+          }
+        ],
+        "reviews": {
+          "average": 3.9,
+          "count": 33
+        },
+        "status": "Active"
+      },
+      {
+        "sku": "PROD-018",
+        "name": "Gaming Chair",
+        "category": "Furniture",
+        "supplier": {
+          "id": "SUPP-08",
+          "name": "Storage Solutions",
+          "rating": 4.6
+        },
+        "variants": [
+          {
+            "color": "Blue",
+            "price": 45.53,
+            "stock": 19,
+            "discount": {
+              "type": "flat",
+              "value": 13
+            }
+          }
+        ],
+        "reviews": {
+          "average": 4.0,
+          "count": 250
+        },
+        "status": "Low Stock"
+      },
+      {
+        "sku": "PROD-019",
+        "name": "Drawing Tablet",
+        "category": "Electronics",
+        "supplier": {
+          "id": "SUPP-02",
+          "name": "Comfort Interiors",
+          "rating": 4.7
+        },
+        "variants": [
+          {
+            "color": "White",
+            "price": 151.86,
+            "stock": 79,
+            "discount": null
+          }
+        ],
+        "reviews": {
+          "average": 4.9,
+          "count": 126
+        },
+        "status": "Active"
+      },
+      {
+        "sku": "PROD-020",
+        "name": "Fitness Tracker Band",
+        "category": "Wearables",
+        "supplier": {
+          "id": "SUPP-10",
+          "name": "KeyWorks",
+          "rating": 4.3
+        },
+        "variants": [
+          {
+            "color": "White",
+            "price": 73.53,
+            "stock": 17,
+            "discount": null
+          }
+        ],
+        "reviews": {
+          "average": 5.0,
+          "count": 227
+        },
+        "status": "Low Stock"
+      }
+    ],
+    "total_products": 20,
+    "low_stock_threshold": 30
+  }
+}

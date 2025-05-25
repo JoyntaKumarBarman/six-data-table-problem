@@ -1,118 +1,177 @@
 import React, {useRef, useState} from 'react';
 import {DataTable, DataTableExpandedRows, DataTableValueArray} from 'primereact/datatable';
-import {Column, ColumnFilterElementTemplateOptions} from 'primereact/column';
+import {Column} from 'primereact/column';
 import useFetch from "../hook/UseFetch";
 import {Toast} from "primereact/toast";
-import {Course} from "../type";
-import {ProgressBar} from "primereact/progressbar";
-import {Tag} from "primereact/tag";
-import {Dropdown} from "primereact/dropdown";
+import {Department, Item, Order} from "../type";
 
 interface Response {
-    academic_records: {
-        courses: Course[]
+    warehouse: {
+        orders: Order[];
+        inventory: {
+            [key: string]: number;
+        }
     }
 }
 
 export default function FifthProblemDataTable() {
-    const {data}: { data: Response | null } = useFetch('/inventoryData/academic_record.json');
-
+    const {data}: { data: Response | null } = useFetch('/inventoryData/warehouse.json');
 
     const [expandedRows, setExpandedRows] = useState<DataTableExpandedRows | DataTableValueArray | undefined>(undefined);
     const [expandedTeamRows, setExpandedTeamRows] = useState<DataTableExpandedRows | DataTableValueArray | undefined>(undefined);
     const toast = useRef<Toast>(null);
-    const [department] = useState<string[]>(["Computer Science", "Mathematics", "Philosophy", "Economics", "Art", "Psychology", "Chemistry", "History", "Biology", "English"]);
 
-    // functions
-    const getStatusSeverity = (status: string) => {
-        switch (status.toLowerCase()) {
-            case 'open':
-                return 'success';  // green
-            case 'closed':
-                return 'danger';   // red
-            case 'waitlisted':
-                return 'warning';  // yellow
-            default:
-                return 'info';     // blue or neutral
+    const itemCountTemplate = (rowData: Order) => {
+        const totalItem = rowData?.items.reduce((total: number, item: Item) => total + item?.quantity, 0)
+        return totalItem;
+    }
+    const totalValueTemplate = (rowData: Order) => {
+        const totalValue = rowData?.items.reduce((total: number, item: Item) => {
+            const {unit_price, quantity} = item;
+            total = total + (quantity * unit_price);
+            return parseFloat(total.toFixed(2))
+        }, 0)
+        return `$ ${totalValue}`;
+    }
+
+    const subtotalValueTemplate = (rowData: Order) => {
+        const subTotal = rowData?.items.reduce((total: number, item: Item) => {
+            const {unit_price, quantity} = item;
+            let discountUnitPercentage = 0;
+            let fixedDiscount = 0;
+            if (item?.discount) {
+                if(item?.discount?.type === "percentage"){
+                    discountUnitPercentage = item?.discount?.value;
+                } else {
+                    fixedDiscount = item?.discount?.value;
+                }
+            }
+            let discountUnitPrice = 0;
+
+            if(discountUnitPercentage){
+               discountUnitPrice = unit_price - ((unit_price / 100) * discountUnitPercentage);
+            } else {
+                discountUnitPrice = unit_price - fixedDiscount;
+            }
+            total = total + (quantity * discountUnitPrice);
+            if(total > 500){
+                total = total - (total/100) * 5;
+            }
+            return parseFloat(total.toFixed(2))
+        }, 0)
+        return `$ ${subTotal}`;
+    }
+
+    const discountPercentageTemplate = (data: Item)=> {
+        return data?.discount?.type === "percentage" ? `${data?.discount?.value}%` : `$${data?.discount?.value}`
+    }
+
+    const discountPriceTemplate = (data: Item)=> {
+        const {unit_price, quantity, discount} = data;
+        let discountedPrice = 0;
+        if(discount){
+            if(discount?.type === "percentage"){
+                discountedPrice = unit_price - ((unit_price/100)* discount?.value);
+            } else {
+                discountedPrice = unit_price - discount?.value;
+            }
         }
+        return discountedPrice.toFixed(2);
+    }
+
+    const profitMarginValueTemplate = (rowData: Order) => {
+        const {shipping: {cost, tax_rate, promo_code, discount_value}} = rowData;
+        const subtotal = rowData?.items.reduce((total: number, item: Item) => {
+            const {unit_price, quantity} = item;
+            let discountUnitPercentage = 0;
+            let fixedDiscount = 0;
+            if (item?.discount) {
+                if(item?.discount?.type === "percentage"){
+                    discountUnitPercentage = item?.discount?.value;
+                } else {
+                    fixedDiscount = item?.discount?.value;
+                }
+            }
+            let discountUnitPrice = 0;
+
+            if(discountUnitPercentage){
+                discountUnitPrice = unit_price - ((unit_price / 100) * discountUnitPercentage);
+            } else {
+                discountUnitPrice = unit_price - fixedDiscount;
+            }
+            total = total + (quantity * discountUnitPrice);
+            if(total > 500){
+                total = total - (total/100) * 5;
+            }
+            return parseFloat(total.toFixed(2))
+        }, 0)
+        const tax = ((subtotal + cost)/100)*tax_rate;
+        let grandTotal = 0;
+        if(promo_code){
+            grandTotal = (subtotal + grandTotal + tax ) - discount_value;
+        } else {
+            grandTotal = (subtotal + grandTotal + tax );
+        }
+        const cogs = subtotal * .3;
+        const profitMargin = ((grandTotal - cogs)/grandTotal) *100;
+        return `${parseFloat(profitMargin.toFixed(2))}%`
+    }
+
+
+    const rowClassName = (rowData: Item) => {
+        const {sku, quantity} = rowData;
+
+        const inventory = data?.warehouse?.inventory?.[sku]|| 0;
+
+        if (inventory < quantity) {
+            return 'low-inventory-row';
+        }
+
+        return '';
+
     };
 
-    const enrolmentStatusSortableFunction = (event: any) => {
-        console.log("sorted", event);
+    const rowExpansionTemplate = (data: Order) => {
 
-    }
-
-    const prerequisitesTemplate = (rowData: Course ) => {
-        const {prerequisites} = rowData;
-        const prerequisitesTag = prerequisites.map((prerequisite) => <Tag value={prerequisite} severity={'info'}></Tag>)
-        return <div className={'flex gap-2'}>{prerequisitesTag}</div>
-    }
-
-    const enrollmentStatusTemplate = (rowData: Course) => {
-        const {current, capacity} = rowData?.enrollment;
-        const currentValueParcentage = ((100 / capacity) * current).toFixed(0);
-        return <ProgressBar value={currentValueParcentage}
-                            displayValueTemplate={() => `${current}/${capacity}(${currentValueParcentage}%)`}/>
-    }
-
-    const statusPillTemplate = (rowData: Course) => {
-        const {status} = rowData;
-        return <span className={'flex align-content-center gap-2'}><Tag severity={getStatusSeverity(status)}
-                                                                        className="border-circle w-2rem h-2rem flex align-items-center justify-content-center"
-                                                                        title={status}/> </span>
-    };
-
-    const departmentFilterTemplate = (options: ColumnFilterElementTemplateOptions) => {
-        return <Dropdown value={options?.value} options={department} placeholder="Select department"
-                         onChange={(e) => options.filterApplyCallback(e.value)} className="p-column-filter" showClear
-                         style={{minWidth: '12rem'}}/>
-    }
-
-    const statusFilterTemplate = (options: ColumnFilterElementTemplateOptions) => {
-        return <Dropdown value={options?.value} options={["open", "close", "waitlisted"]} placeholder="Select status."
-                         onChange={(e) => options.filterApplyCallback(e.value)} className="p-column-filter" showClear
-                         style={{minWidth: '12rem'}}/>
-    }
-
-
-    const rowExpansionTemplate = (data: Course) => {
         return (
             <div className="p-5">
-                <DataTable value={[data]} dataKey={'team_id'} emptyMessage="No data found."
-
+                <DataTable value={data?.items} dataKey={'team_id'} emptyMessage="No data found."
+                           rowClassName={rowClassName}
                 >
-                    <Column field="schedule.room" header="Room" ></Column>
-                    <Column field="schedule.time" header="Team Id" ></Column>
-                    <Column field="prerequisites" header="Prerequisites Courses" body={prerequisitesTemplate} ></Column>
+                    <Column field="sku" header="SKU" ></Column>
+                    <Column field="name" header="Name" ></Column>
+                    <Column field="unit_price" header="unit_price" ></Column>
+                    <Column field="quantity" header="Order quantity" ></Column>
+                    <Column field="quantity" header="Discount" body={discountPercentageTemplate} ></Column>
+                    <Column field="quantity" header="Discounted Price" body={discountPriceTemplate} ></Column>
                 </DataTable>
             </div>
         );
     }
 
 
+
     return (
         <div className="card">
 
             <Toast ref={toast}></Toast>
-            <DataTable value={data?.academic_records?.courses} dataKey="course_code" filterDisplay="row"
+            <DataTable value={data?.warehouse?.orders} dataKey="order_id" filterDisplay="row"
                        emptyMessage="No data found."
                        globalFilterFields={["department", "status"]}
                        expandedRows={expandedRows} onRowToggle={(e) => setExpandedRows(e.data)}
                        rowExpansionTemplate={rowExpansionTemplate}
+
                        rows={10}
                        paginator
 
 
             >
                 <Column expander={true} style={{width: '1rem'}}/>
-                <Column field="department" header="Department" filter filterField={"department"}
-                        filterElement={departmentFilterTemplate} style={{minWidth: '12rem'}}/>
-                <Column field="course_code" header="Course Code" style={{minWidth: '12rem'}}/>
-                <Column field="title" header="Title" style={{minWidth: '12rem'}}/>
-                <Column field="instructor" header="Instructor" style={{minWidth: '12rem'}}/>
-                <Column field="course_code" header="Enrollment Status" body={enrollmentStatusTemplate} sortable
-                        sortFunction={enrolmentStatusSortableFunction} style={{minWidth: '12rem'}}/>
-                <Column field="status" header="Status" body={statusPillTemplate} filter filterElement={statusFilterTemplate} style={{minWidth: '2rem'}}/>
+                <Column field="order_id" header="Order Id" style={{minWidth: '12rem'}}/>
+                <Column field="" header="Item Count" body={itemCountTemplate} style={{minWidth: '12rem'}}/>
+                <Column field="instructor" header="Total Value" body={totalValueTemplate} style={{minWidth: '12rem'}}/>
+                <Column field="instructor" header="Subtotal" body={subtotalValueTemplate} style={{minWidth: '12rem'}}/>
+                <Column field="instructor" header="Profit Margin" body={profitMarginValueTemplate} style={{minWidth: '12rem'}}/>
 
 
             </DataTable>

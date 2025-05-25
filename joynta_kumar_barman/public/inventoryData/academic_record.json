@@ -1,0 +1,334 @@
+
+  {
+    "academic_records": {
+      "semester": "Spring 2024",
+      "courses": [
+        {
+          "course_code": "CS-401",
+          "title": "Advanced Algorithms",
+          "instructor": "Dr. Michael Chen",
+          "enrollment": {
+            "current": 28,
+            "capacity": 35
+          },
+          "status": "Open",
+          "schedule": {
+            "time": "MWF 10:00-11:30",
+            "room": "SCI-205"
+          },
+          "prerequisites": ["CS-301", "MATH-201"],
+          "department": "Computer Science"
+        },
+        {
+          "course_code": "MATH-301",
+          "title": "Linear Algebra",
+          "instructor": "Dr. Sarah Johnson",
+          "enrollment": {
+            "current": 45,
+            "capacity": 45
+          },
+          "status": "waitlisted",
+          "schedule": {
+            "time": "TTH 9:00-10:30",
+            "room": "MATH-102"
+          },
+          "prerequisites": ["MATH-201"],
+          "department": "Mathematics",
+          "waitlist_available": true
+        },
+        {
+          "course_code": "PHYS-202",
+          "title": "Quantum Mechanics",
+          "instructor": "Dr. Robert Lee",
+          "enrollment": {
+            "current": 22,
+            "capacity": 30
+          },
+          "status": "Open",
+          "schedule": {
+            "time": "MWF 13:00-14:30",
+            "room": "SCI-310"
+          },
+          "prerequisites": ["PHYS-101", "MATH-202"],
+          "department": "Physics"
+        },
+        {
+          "course_code": "ENG-205",
+          "title": "Creative Writing",
+          "instructor": "Prof. Emily Wilson",
+          "enrollment": {
+            "current": 15,
+            "capacity": 20
+          },
+          "status": "Open",
+          "schedule": {
+            "time": "TTH 11:00-12:30",
+            "room": "HUM-105"
+          },
+          "prerequisites": ["ENG-101"],
+          "department": "English"
+        },
+        {
+          "course_code": "BIO-310",
+          "title": "Genetics",
+          "instructor": "Dr. Alan Park",
+          "enrollment": {
+            "current": 40,
+            "capacity": 40
+          },
+          "status": "Closed",
+          "schedule": {
+            "time": "MWF 9:00-10:30",
+            "room": "BIO-201"
+          },
+          "prerequisites": ["BIO-101", "CHEM-101"],
+          "department": "Biology",
+          "waitlist_available": true
+        },
+        {
+          "course_code": "CHEM-201",
+          "title": "Organic Chemistry",
+          "instructor": "Dr. Lisa Wong",
+          "enrollment": {
+            "current": 35,
+            "capacity": 35
+          },
+          "status": "Closed",
+          "schedule": {
+            "time": "TTH 13:00-14:30",
+            "room": "SCI-110"
+          },
+          "prerequisites": ["CHEM-101"],
+          "department": "Chemistry",
+          "waitlist_available": true
+        },
+        {
+          "course_code": "CS-301",
+          "title": "Data Structures",
+          "instructor": "Prof. David Kim",
+          "enrollment": {
+            "current": 30,
+            "capacity": 35
+          },
+          "status": "Open",
+          "schedule": {
+            "time": "MWF 11:00-12:30",
+            "room": "CS-102"
+          },
+          "prerequisites": ["CS-201"],
+          "department": "Computer Science"
+        },
+        {
+          "course_code": "HIST-210",
+          "title": "World History",
+          "instructor": "Dr. James Miller",
+          "enrollment": {
+            "current": 25,
+            "capacity": 30
+          },
+          "status": "Open",
+          "schedule": {
+            "time": "TTH 10:00-11:30",
+            "room": "HUM-210"
+          },
+          "prerequisites": [],
+          "department": "History"
+        },
+        {
+          "course_code": "PSYCH-101",
+          "title": "Introduction to Psychology",
+          "instructor": "Dr. Rachel Green",
+          "enrollment": {
+            "current": 45,
+            "capacity": 50
+          },
+          "status": "Open",
+          "schedule": {
+            "time": "MWF 14:00-15:30",
+            "room": "SOC-105"
+          },
+          "prerequisites": [],
+          "department": "Psychology"
+        },
+        {
+          "course_code": "ART-115",
+          "title": "Digital Art",
+          "instructor": "Prof. Mark Taylor",
+          "enrollment": {
+            "current": 18,
+            "capacity": 20
+          },
+          "status": "Open",
+          "schedule": {
+            "time": "TTH 14:00-16:00",
+            "room": "ART-301"
+          },
+          "prerequisites": [],
+          "department": "Art"
+        },
+        {
+          "course_code": "ECON-301",
+          "title": "Microeconomics",
+          "instructor": "Dr. Susan Clark",
+          "enrollment": {
+            "current": 40,
+            "capacity": 40
+          },
+          "status": "Closed",
+          "schedule": {
+            "time": "MWF 10:00-11:30",
+            "room": "BUS-205"
+          },
+          "prerequisites": ["ECON-101"],
+          "department": "Economics",
+          "waitlist_available": true
+        },
+        {
+          "course_code": "MUSIC-201",
+          "title": "Music Theory",
+          "instructor": "Prof. Daniel White",
+          "enrollment": {
+            "current": 12,
+            "capacity": 15
+          },
+          "status": "Open",
+          "schedule": {
+            "time": "TTH 13:00-14:30",
+            "room": "MUS-101"
+          },
+          "prerequisites": ["MUSIC-101"],
+          "department": "Music"
+        },
+        {
+          "course_code": "PHIL-101",
+          "title": "Introduction to Philosophy",
+          "instructor": "Dr. Thomas Brown",
+          "enrollment": {
+            "current": 22,
+            "capacity": 25
+          },
+          "status": "Open",
+          "schedule": {
+            "time": "MWF 13:00-14:30",
+            "room": "HUM-115"
+          },
+          "prerequisites": [],
+          "department": "Philosophy"
+        },
+        {
+          "course_code": "CS-450",
+          "title": "Machine Learning",
+          "instructor": "Dr. Angela Wu",
+          "enrollment": {
+            "current": 24,
+            "capacity": 25
+          },
+          "status": "Open",
+          "schedule": {
+            "time": "TTH 10:00-11:30",
+            "room": "CS-305"
+          },
+          "prerequisites": ["CS-301", "MATH-301"],
+          "department": "Computer Science"
+        },
+        {
+          "course_code": "PHYS-101",
+          "title": "Classical Mechanics",
+          "instructor": "Dr. Richard Adams",
+          "enrollment": {
+            "current": 30,
+            "capacity": 35
+          },
+          "status": "Open",
+          "schedule": {
+            "time": "MWF 9:00-10:30",
+            "room": "SCI-210"
+          },
+          "prerequisites": ["MATH-201"],
+          "department": "Physics"
+        },
+        {
+          "course_code": "BIO-201",
+          "title": "Cell Biology",
+          "instructor": "Dr. Patricia Lopez",
+          "enrollment": {
+            "current": 35,
+            "capacity": 35
+          },
+          "status": "Closed",
+          "schedule": {
+            "time": "TTH 11:00-12:30",
+            "room": "BIO-105"
+          },
+          "prerequisites": ["BIO-101"],
+          "department": "Biology",
+          "waitlist_available": true
+        },
+        {
+          "course_code": "MATH-401",
+          "title": "Differential Equations",
+          "instructor": "Dr. Kevin Harris",
+          "enrollment": {
+            "current": 20,
+            "capacity": 25
+          },
+          "status": "Open",
+          "schedule": {
+            "time": "MWF 14:00-15:30",
+            "room": "MATH-205"
+          },
+          "prerequisites": ["MATH-301"],
+          "department": "Mathematics"
+        },
+        {
+          "course_code": "CHEM-301",
+          "title": "Physical Chemistry",
+          "instructor": "Dr. Nancy Scott",
+          "enrollment": {
+            "current": 18,
+            "capacity": 20
+          },
+          "status": "Open",
+          "schedule": {
+            "time": "TTH 9:00-10:30",
+            "room": "SCI-115"
+          },
+          "prerequisites": ["CHEM-201", "PHYS-101"],
+          "department": "Chemistry"
+        },
+        {
+          "course_code": "CS-201",
+          "title": "Object-Oriented Programming",
+          "instructor": "Prof. Jason Lee",
+          "enrollment": {
+            "current": 32,
+            "capacity": 35
+          },
+          "status": "Open",
+          "schedule": {
+            "time": "MWF 12:00-13:30",
+            "room": "CS-101"
+          },
+          "prerequisites": ["CS-101"],
+          "department": "Computer Science"
+        },
+        {
+          "course_code": "ENG-301",
+          "title": "Shakespeare",
+          "instructor": "Dr. Elizabeth Taylor",
+          "enrollment": {
+            "current": 15,
+            "capacity": 20
+          },
+          "status": "Open",
+          "schedule": {
+            "time": "TTH 15:00-16:30",
+            "room": "HUM-305"
+          },
+          "prerequisites": ["ENG-205"],
+          "department": "English"
+        }
+      ],
+      "total_enrolled": 1540
+    }
+  }

@@ -1,0 +1,502 @@
+{
+  "factory": {
+    "products": [
+      {
+        "product_id": "MOTOR-X1",
+        "materials": [
+          {
+            "material_id": "STEEL-5K",
+            "units_required": 4.5,
+            "waste_factor": 0.15
+          },
+          {
+            "material_id": "COPPER-3K",
+            "units_required": 2.1,
+            "waste_factor": 0.1
+          }
+        ],
+        "labor": {
+          "hours": 8.5,
+          "cost_per_hour": 32.50
+        }
+      },
+      {
+        "product_id": "PUMP-Z2",
+        "materials": [
+          {
+            "material_id": "ALUM-2K",
+            "units_required": 3.2,
+            "waste_factor": 0.12
+          },
+          {
+            "material_id": "RUBBER-1K",
+            "units_required": 1.5,
+            "waste_factor": 0.2
+          }
+        ],
+        "labor": {
+          "hours": 6.0,
+          "cost_per_hour": 28.75
+        }
+      },
+      {
+        "product_id": "GEARBOX-5T",
+        "materials": [
+          {
+            "material_id": "STEEL-5K",
+            "units_required": 7.8,
+            "waste_factor": 0.18
+          },
+          {
+            "material_id": "GREASE-1L",
+            "units_required": 0.5,
+            "waste_factor": 0.05
+          }
+        ],
+        "labor": {
+          "hours": 12.0,
+          "cost_per_hour": 35.00
+        }
+      },
+      {
+        "product_id": "CONTROL-V3",
+        "materials": [
+          {
+            "material_id": "PLASTIC-2K",
+            "units_required": 2.3,
+            "waste_factor": 0.1
+          },
+          {
+            "material_id": "COPPER-3K",
+            "units_required": 1.2,
+            "waste_factor": 0.15
+          }
+        ],
+        "labor": {
+          "hours": 5.5,
+          "cost_per_hour": 30.00
+        }
+      },
+      {
+        "product_id": "SENSOR-A8",
+        "materials": [
+          {
+            "material_id": "SILICON-1K",
+            "units_required": 0.8,
+            "waste_factor": 0.25
+          },
+          {
+            "material_id": "PLASTIC-2K",
+            "units_required": 1.2,
+            "waste_factor": 0.1
+          }
+        ],
+        "labor": {
+          "hours": 3.0,
+          "cost_per_hour": 40.00
+        }
+      },
+      {
+        "product_id": "VALVE-B4",
+        "materials": [
+          {
+            "material_id": "BRASS-3K",
+            "units_required": 2.5,
+            "waste_factor": 0.15
+          },
+          {
+            "material_id": "RUBBER-1K",
+            "units_required": 0.3,
+            "waste_factor": 0.2
+          }
+        ],
+        "labor": {
+          "hours": 4.5,
+          "cost_per_hour": 28.00
+        }
+      },
+      {
+        "product_id": "ACTUATOR-C7",
+        "materials": [
+          {
+            "material_id": "ALUM-2K",
+            "units_required": 3.0,
+            "waste_factor": 0.1
+          },
+          {
+            "material_id": "STEEL-5K",
+            "units_required": 1.8,
+            "waste_factor": 0.15
+          }
+        ],
+        "labor": {
+          "hours": 7.0,
+          "cost_per_hour": 34.50
+        }
+      },
+      {
+        "product_id": "FILTER-D9",
+        "materials": [
+          {
+            "material_id": "FIBER-1K",
+            "units_required": 1.5,
+            "waste_factor": 0.3
+          },
+          {
+            "material_id": "PLASTIC-2K",
+            "units_required": 0.8,
+            "waste_factor": 0.1
+          }
+        ],
+        "labor": {
+          "hours": 2.5,
+          "cost_per_hour": 25.00
+        }
+      },
+      {
+        "product_id": "BEARING-E2",
+        "materials": [
+          {
+            "material_id": "STEEL-5K",
+            "units_required": 1.2,
+            "waste_factor": 0.2
+          },
+          {
+            "material_id": "GREASE-1L",
+            "units_required": 0.2,
+            "waste_factor": 0.05
+          }
+        ],
+        "labor": {
+          "hours": 3.5,
+          "cost_per_hour": 29.00
+        }
+      },
+      {
+        "product_id": "HOUSING-F5",
+        "materials": [
+          {
+            "material_id": "PLASTIC-2K",
+            "units_required": 4.0,
+            "waste_factor": 0.1
+          },
+          {
+            "material_id": "ALUM-2K",
+            "units_required": 0.5,
+            "waste_factor": 0.1
+          }
+        ],
+        "labor": {
+          "hours": 6.0,
+          "cost_per_hour": 27.50
+        }
+      },
+      {
+        "product_id": "SHAFT-G6",
+        "materials": [
+          {
+            "material_id": "STEEL-5K",
+            "units_required": 5.5,
+            "waste_factor": 0.2
+          }
+        ],
+        "labor": {
+          "hours": 9.0,
+          "cost_per_hour": 33.00
+        }
+      },
+      {
+        "product_id": "COUPLER-H8",
+        "materials": [
+          {
+            "material_id": "ALUM-2K",
+            "units_required": 2.8,
+            "waste_factor": 0.15
+          },
+          {
+            "material_id": "RUBBER-1K",
+            "units_required": 0.6,
+            "waste_factor": 0.25
+          }
+        ],
+        "labor": {
+          "hours": 5.0,
+          "cost_per_hour": 31.00
+        }
+      },
+      {
+        "product_id": "ADAPTER-J3",
+        "materials": [
+          {
+            "material_id": "BRASS-3K",
+            "units_required": 1.8,
+            "waste_factor": 0.15
+          }
+        ],
+        "labor": {
+          "hours": 4.0,
+          "cost_per_hour": 26.50
+        }
+      },
+      {
+        "product_id": "SEAL-K7",
+        "materials": [
+          {
+            "material_id": "RUBBER-1K",
+            "units_required": 0.9,
+            "waste_factor": 0.3
+          },
+          {
+            "material_id": "FIBER-1K",
+            "units_required": 0.3,
+            "waste_factor": 0.2
+          }
+        ],
+        "labor": {
+          "hours": 2.0,
+          "cost_per_hour": 24.00
+        }
+      },
+      {
+        "product_id": "BOLT-L1",
+        "materials": [
+          {
+            "material_id": "STEEL-5K",
+            "units_required": 0.5,
+            "waste_factor": 0.1
+          }
+        ],
+        "labor": {
+          "hours": 1.0,
+          "cost_per_hour": 22.00
+        }
+      },
+      {
+        "product_id": "NUT-M4",
+        "materials": [
+          {
+            "material_id": "STEEL-5K",
+            "units_required": 0.3,
+            "waste_factor": 0.1
+          }
+        ],
+        "labor": {
+          "hours": 0.8,
+          "cost_per_hour": 22.00
+        }
+      },
+      {
+        "product_id": "WASHER-N9",
+        "materials": [
+          {
+            "material_id": "STEEL-5K",
+            "units_required": 0.2,
+            "waste_factor": 0.1
+          }
+        ],
+        "labor": {
+          "hours": 0.5,
+          "cost_per_hour": 22.00
+        }
+      },
+      {
+        "product_id": "CLIP-P2",
+        "materials": [
+          {
+            "material_id": "PLASTIC-2K",
+            "units_required": 0.4,
+            "waste_factor": 0.15
+          }
+        ],
+        "labor": {
+          "hours": 1.2,
+          "cost_per_hour": 23.50
+        }
+      },
+      {
+        "product_id": "SPRING-Q5",
+        "materials": [
+          {
+            "material_id": "STEEL-5K",
+            "units_required": 0.7,
+            "waste_factor": 0.2
+          }
+        ],
+        "labor": {
+          "hours": 2.5,
+          "cost_per_hour": 28.00
+        }
+      },
+      {
+        "product_id": "WIRE-R8",
+        "materials": [
+          {
+            "material_id": "COPPER-3K",
+            "units_required": 1.5,
+            "waste_factor": 0.15
+          },
+          {
+            "material_id": "PLASTIC-2K",
+            "units_required": 0.5,
+            "waste_factor": 0.1
+          }
+        ],
+        "labor": {
+          "hours": 3.5,
+          "cost_per_hour": 26.00
+        }
+      }
+    ],
+    "resources": {
+      "STEEL-5K": {
+        "stock": 2450,
+        "unit_cost": 12.75,
+        "lead_time": 14
+      },
+      "COPPER-3K": {
+        "stock": 1200,
+        "unit_cost": 18.50,
+        "lead_time": 21
+      },
+      "ALUM-2K": {
+        "stock": 1800,
+        "unit_cost": 9.80,
+        "lead_time": 10
+      },
+      "RUBBER-1K": {
+        "stock": 850,
+        "unit_cost": 6.25,
+        "lead_time": 7
+      },
+      "GREASE-1L": {
+        "stock": 420,
+        "unit_cost": 14.00,
+        "lead_time": 5
+      },
+      "PLASTIC-2K": {
+        "stock": 3200,
+        "unit_cost": 4.75,
+        "lead_time": 12
+      },
+      "SILICON-1K": {
+        "stock": 150,
+        "unit_cost": 45.00,
+        "lead_time": 28
+      },
+      "BRASS-3K": {
+        "stock": 950,
+        "unit_cost": 15.25,
+        "lead_time": 18
+      },
+      "FIBER-1K": {
+        "stock": 680,
+        "unit_cost": 8.40,
+        "lead_time": 9
+      }
+    },
+    "orders": [
+      {
+        "order_id": "ORD-2024-001",
+        "product_id": "MOTOR-X1",
+        "order_qty": 500,
+        "due_date": "2024-05-30",
+        "status": "in_production",
+        "priority": "high"
+      },
+      {
+        "order_id": "ORD-2024-002",
+        "product_id": "PUMP-Z2",
+        "order_qty": 300,
+        "due_date": "2024-06-15",
+        "status": "pending",
+        "priority": "medium"
+      },
+      {
+        "order_id": "ORD-2024-003",
+        "product_id": "GEARBOX-5T",
+        "order_qty": 750,
+        "due_date": "2024-06-05",
+        "status": "pending",
+        "priority": "high"
+      },
+      {
+        "order_id": "ORD-2024-004",
+        "product_id": "CONTROL-V3",
+        "order_qty": 200,
+        "due_date": "2024-05-25",
+        "status": "urgent",
+        "priority": "critical"
+      },
+      {
+        "order_id": "ORD-2024-005",
+        "product_id": "SENSOR-A8",
+        "order_qty": 450,
+        "due_date": "2024-06-20",
+        "status": "pending",
+        "priority": "low"
+      },
+      {
+        "order_id": "ORD-2024-006",
+        "product_id": "VALVE-B4",
+        "order_qty": 600,
+        "due_date": "2024-06-10",
+        "status": "in_production",
+        "priority": "medium"
+      },
+      {
+        "order_id": "ORD-2024-007",
+        "product_id": "ACTUATOR-C7",
+        "order_qty": 350,
+        "due_date": "2024-05-28",
+        "status": "urgent",
+        "priority": "high"
+      },
+      {
+        "order_id": "ORD-2024-008",
+        "product_id": "FILTER-D9",
+        "order_qty": 800,
+        "due_date": "2024-06-25",
+        "status": "pending",
+        "priority": "low"
+      },
+      {
+        "order_id": "ORD-2024-009",
+        "product_id": "BEARING-E2",
+        "order_qty": 250,
+        "due_date": "2024-06-01",
+        "status": "in_production",
+        "priority": "medium"
+      },
+      {
+        "order_id": "ORD-2024-010",
+        "product_id": "HOUSING-F5",
+        "order_qty": 400,
+        "due_date": "2024-06-18",
+        "status": "pending",
+        "priority": "medium"
+      }
+    ],
+    "dashboard": {
+      "current_date": "2024-05-20",
+      "order_status_options": [
+        "pending",
+        "in_production",
+        "completed",
+        "shipped",
+        "delayed",
+        "urgent"
+      ],
+      "priority_levels": [
+        "critical",
+        "high",
+        "medium",
+        "low"
+      ],
+      "material_status_colors": {
+        "green": ">110% of needed",
+        "yellow": "90-110% of needed",
+        "red": "<90% of needed"
+      }
+    }
+  }
+}

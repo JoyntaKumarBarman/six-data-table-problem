@@ -1,12 +1,13 @@
 import React, {useRef, useState} from 'react';
-import {DataTable, DataTableExpandedRows, DataTableValueArray} from 'primereact/datatable';
-import {Column, ColumnFilterElementTemplateOptions} from 'primereact/column';
+import {DataTable, DataTableExpandedRows, DataTableStateEvent, DataTableValueArray} from 'primereact/datatable';
+import {Column, ColumnFilterElementTemplateOptions, ColumnSortEvent} from 'primereact/column';
 import useFetch from "../hook/UseFetch";
 import {Toast} from "primereact/toast";
 import {Course} from "../type";
 import {ProgressBar} from "primereact/progressbar";
 import {Tag} from "primereact/tag";
 import {Dropdown} from "primereact/dropdown";
+import {Button} from "primereact/button";
 
 interface Response {
     academic_records: {
@@ -37,15 +38,24 @@ export default function ThirdProblemDataTable() {
         }
     };
 
-    const enrolmentStatusSortableFunction = (event: any) => {
-        console.log("sorted", event);
+    const enrolmentStatusSortableFunction = (e: ColumnSortEvent) => {
+        // e.data.sort((a: Course, b: Course) => {
+        //     const { enrollment: { current: aCurrent, capacity: aCapacity } } = a;
+        //     const { enrollment: { current: bCurrent, capacity: bCapacity } } = b;
+        //
+        //     const percentageA = (aCurrent / aCapacity) * 100;
+        //     const percentageB = (bCurrent / bCapacity) * 100;
+        //
+        //     console.log((percentageA - percentageB) * e.order!)
+        //
+        //     return (percentageA - percentageB) * e.order!;  // Ascending if order = 1, descending if order = -1
+        // });
+    };
 
-    }
-
-    const prerequisitesTemplate = (rowData: Course ) => {
+    const prerequisitesTemplate = (rowData: Course) => {
         const {prerequisites} = rowData;
-         const prerequisitesTag = prerequisites.map((prerequisite) => <Tag value={prerequisite} severity={'info'}></Tag>)
-    return <div className={'flex gap-2'}>{prerequisitesTag}</div>
+        const prerequisitesTag = prerequisites.map((prerequisite) => <a href={'/'}><Tag value={prerequisite} severity={'info'}></Tag></a>)
+        return <div className={'flex gap-2'}>{prerequisitesTag}</div>
     }
 
     const enrollmentStatusTemplate = (rowData: Course) => {
@@ -58,9 +68,15 @@ export default function ThirdProblemDataTable() {
     const statusPillTemplate = (rowData: Course) => {
         const {status} = rowData;
         return <span className={'flex align-content-center gap-2'}><Tag severity={getStatusSeverity(status)}
-                    className="border-circle w-2rem h-2rem flex align-items-center justify-content-center"
-                          title={status}/> </span>
+                                                                        className="border-circle w-2rem h-2rem flex align-items-center justify-content-center"
+                                                                        title={status}/> </span>
     };
+
+    const waitListTemplate = (rowData: Course) => {
+        const {current, capacity} = rowData?.enrollment;
+        const currentValueParcentage = ((100 / capacity) * current).toFixed(0);
+        return currentValueParcentage === '100' ? <Button className={'p-2'}>WaitList</Button> : '';
+    }
 
     const departmentFilterTemplate = (options: ColumnFilterElementTemplateOptions) => {
         return <Dropdown value={options?.value} options={department} placeholder="Select department"
@@ -81,9 +97,9 @@ export default function ThirdProblemDataTable() {
                 <DataTable value={[data]} dataKey={'team_id'} emptyMessage="No data found."
 
                 >
-                    <Column field="schedule.room" header="Room" ></Column>
-                    <Column field="schedule.time" header="Team Id" ></Column>
-                    <Column field="prerequisites" header="Prerequisites Courses" body={prerequisitesTemplate} ></Column>
+                    <Column field="schedule.room" header="Room"></Column>
+                    <Column field="schedule.time" header="Team Id"></Column>
+                    <Column field="prerequisites" header="Prerequisites Courses" body={prerequisitesTemplate}></Column>
                 </DataTable>
             </div>
         );
@@ -96,13 +112,12 @@ export default function ThirdProblemDataTable() {
             <Toast ref={toast}></Toast>
             <DataTable value={data?.academic_records?.courses} dataKey="course_code" filterDisplay="row"
                        emptyMessage="No data found."
+                       sortMode="single"
                        globalFilterFields={["department", "status"]}
                        expandedRows={expandedRows} onRowToggle={(e) => setExpandedRows(e.data)}
                        rowExpansionTemplate={rowExpansionTemplate}
                        rows={10}
                        paginator
-
-
             >
                 <Column expander={true} style={{width: '1rem'}}/>
                 <Column field="department" header="Department" filter filterField={"department"}
@@ -110,13 +125,12 @@ export default function ThirdProblemDataTable() {
                 <Column field="course_code" header="Course Code" style={{minWidth: '12rem'}}/>
                 <Column field="title" header="Title" style={{minWidth: '12rem'}}/>
                 <Column field="instructor" header="Instructor" style={{minWidth: '12rem'}}/>
-                <Column field="course_code" header="Enrollment Status" body={enrollmentStatusTemplate} sortable
-                        sortFunction={enrolmentStatusSortableFunction} style={{minWidth: '12rem'}}/>
-                <Column field="status" header="Status" body={statusPillTemplate} filter filterElement={statusFilterTemplate} style={{minWidth: '2rem'}}/>
-
-
+                <Column field="enrollment" header="Enrollment Status" body={enrollmentStatusTemplate} sortable
+                         style={{minWidth: '12rem'}}/>
+                <Column field="status" header="Status" body={statusPillTemplate} filter
+                        filterElement={statusFilterTemplate} style={{minWidth: '2rem'}}/>
+                <Column field="status" header="Wait List" body={waitListTemplate} style={{minWidth: '5rem'}}/>
             </DataTable>
-            {/*<TestTable/>*/}
         </div>
     );
 }

@@ -1,0 +1,580 @@
+{
+  "warehouse": {
+    "orders": [
+      {
+        "order_id": "ORD-88762",
+        "date": "2024-03-15",
+        "customer": "CUST-11245",
+        "items": [
+          {
+            "sku": "PROD-665",
+            "name": "Wireless Speaker",
+            "unit_price": 89.99,
+            "quantity": 20000000,
+            "discount": {"type": "percentage", "value": 0}
+          },
+          {
+            "sku": "PROD-721",
+            "name": "Bluetooth Headphones",
+            "unit_price": 100,
+            "quantity": 1,
+            "discount": {"type": "fixed", "value": 1}
+          }
+        ],
+        "shipping": {
+          "cost": 12.99,
+          "tax_rate": 8.5,
+          "promo_code": "FREESHIP50",
+          "discount_value": 6.50
+        },
+        "status": "Pending",
+        "subtotal": 280.98,
+        "tax": 24.45,
+        "grand_total": 298.93,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": false
+      },
+      {
+        "order_id": "ORD-91234",
+        "date": "2024-03-16",
+        "customer": "CUST-20891",
+        "items": [
+          {
+            "sku": "PROD-412",
+            "name": "Smart Watch",
+            "unit_price": 199.99,
+            "quantity": 3,
+            "discount": {"type": "percentage", "value": 10}
+          }
+        ],
+        "shipping": {
+          "cost": 0.00,
+          "tax_rate": 8.5,
+          "promo_code": "FREESHIP100",
+          "discount_value": 29.99
+        },
+        "status": "Processing",
+        "subtotal": 539.97,
+        "tax": 45.90,
+        "grand_total": 517.42,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": true
+      },
+      {
+        "order_id": "ORD-92345",
+        "date": "2024-03-17",
+        "customer": "CUST-31567",
+        "items": [
+          {
+            "sku": "PROD-887",
+            "name": "4K TV 55\"",
+            "unit_price": 599.99,
+            "quantity": 1,
+            "discount": {"type": "fixed", "value": 50}
+          },
+          {
+            "sku": "PROD-112",
+            "name": "HDMI Cable",
+            "unit_price": 19.99,
+            "quantity": 2,
+            "discount": null
+          }
+        ],
+        "shipping": {
+          "cost": 29.99,
+          "tax_rate": 8.5,
+          "promo_code": null,
+          "discount_value": 0
+        },
+        "status": "Shipped",
+        "subtotal": 639.97,
+        "tax": 56.95,
+        "grand_total": 726.91,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": true
+      },
+      {
+        "order_id": "ORD-93456",
+        "date": "2024-03-18",
+        "customer": "CUST-42234",
+        "items": [
+          {
+            "sku": "PROD-556",
+            "name": "Wireless Charger",
+            "unit_price": 39.99,
+            "quantity": 5,
+            "discount": {"type": "percentage", "value": 20}
+          }
+        ],
+        "shipping": {
+          "cost": 8.99,
+          "tax_rate": 8.5,
+          "promo_code": "SHIP10",
+          "discount_value": 0.90
+        },
+        "status": "Pending",
+        "subtotal": 159.96,
+        "tax": 14.37,
+        "grand_total": 158.32,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": false
+      },
+      {
+        "order_id": "ORD-94567",
+        "date": "2024-03-19",
+        "customer": "CUST-51982",
+        "items": [
+          {
+            "sku": "PROD-223",
+            "name": "Gaming Laptop",
+            "unit_price": 1299.99,
+            "quantity": 1,
+            "discount": {"type": "percentage", "value": 5}
+          }
+        ],
+        "shipping": {
+          "cost": 0.00,
+          "tax_rate": 8.5,
+          "promo_code": "FREESHIP100",
+          "discount_value": 29.99
+        },
+        "status": "Processing",
+        "subtotal": 1234.99,
+        "tax": 104.97,
+        "grand_total": 1259.24,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": true
+      },
+      {
+        "order_id": "ORD-95678",
+        "date": "2024-03-20",
+        "customer": "CUST-61245",
+        "items": [
+          {
+            "sku": "PROD-778",
+            "name": "Smartphone",
+            "unit_price": 799.99,
+            "quantity": 2,
+            "discount": {"type": "percentage", "value": 12}
+          }
+        ],
+        "shipping": {
+          "cost": 15.99,
+          "tax_rate": 8.5,
+          "promo_code": null,
+          "discount_value": 0
+        },
+        "status": "Pending",
+        "subtotal": 1407.98,
+        "tax": 121.04,
+        "grand_total": 1544.99,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": true
+      },
+      {
+        "order_id": "ORD-96789",
+        "date": "2024-03-21",
+        "customer": "CUST-70321",
+        "items": [
+          {
+            "sku": "PROD-445",
+            "name": "Tablet",
+            "unit_price": 349.99,
+            "quantity": 1,
+            "discount": null
+          },
+          {
+            "sku": "PROD-112",
+            "name": "HDMI Cable",
+            "unit_price": 19.99,
+            "quantity": 3,
+            "discount": {"type": "fixed", "value": 5}
+          }
+        ],
+        "shipping": {
+          "cost": 9.99,
+          "tax_rate": 8.5,
+          "promo_code": "SHIP15",
+          "discount_value": 1.50
+        },
+        "status": "Shipped",
+        "subtotal": 402.96,
+        "tax": 35.10,
+        "grand_total": 392.05,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": false
+      },
+      {
+        "order_id": "ORD-97890",
+        "date": "2024-03-22",
+        "customer": "CUST-89456",
+        "items": [
+          {
+            "sku": "PROD-334",
+            "name": "Monitor 27\"",
+            "unit_price": 249.99,
+            "quantity": 2,
+            "discount": {"type": "percentage", "value": 15}
+          }
+        ],
+        "shipping": {
+          "cost": 0.00,
+          "tax_rate": 8.5,
+          "promo_code": "FREESHIP50",
+          "discount_value": 14.99
+        },
+        "status": "Processing",
+        "subtotal": 424.98,
+        "tax": 36.12,
+        "grand_total": 424.98,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": false
+      },
+      {
+        "order_id": "ORD-98901",
+        "date": "2024-03-23",
+        "customer": "CUST-98567",
+        "items": [
+          {
+            "sku": "PROD-901",
+            "name": "DSLR Camera",
+            "unit_price": 899.99,
+            "quantity": 1,
+            "discount": {"type": "fixed", "value": 100}
+          },
+          {
+            "sku": "PROD-223",
+            "name": "Camera Lens",
+            "unit_price": 299.99,
+            "quantity": 1,
+            "discount": null
+          }
+        ],
+        "shipping": {
+          "cost": 19.99,
+          "tax_rate": 8.5,
+          "promo_code": null,
+          "discount_value": 0
+        },
+        "status": "Pending",
+        "subtotal": 1099.98,
+        "tax": 95.20,
+        "grand_total": 1215.17,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": true
+      },
+      {
+        "order_id": "ORD-99012",
+        "date": "2024-03-24",
+        "customer": "CUST-10234",
+        "items": [
+          {
+            "sku": "PROD-556",
+            "name": "Wireless Charger",
+            "unit_price": 39.99,
+            "quantity": 10,
+            "discount": {"type": "percentage", "value": 25}
+          }
+        ],
+        "shipping": {
+          "cost": 12.99,
+          "tax_rate": 8.5,
+          "promo_code": "SHIP10",
+          "discount_value": 1.30
+        },
+        "status": "Shipped",
+        "subtotal": 299.93,
+        "tax": 26.61,
+        "grand_total": 309.53,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": false
+      },
+      {
+        "order_id": "ORD-90123",
+        "date": "2024-03-25",
+        "customer": "CUST-20345",
+        "items": [
+          {
+            "sku": "PROD-112",
+            "name": "HDMI Cable",
+            "unit_price": 19.99,
+            "quantity": 15,
+            "discount": {"type": "percentage", "value": 40}
+          }
+        ],
+        "shipping": {
+          "cost": 0.00,
+          "tax_rate": 8.5,
+          "promo_code": "FREESHIP100",
+          "discount_value": 9.99
+        },
+        "status": "Processing",
+        "subtotal": 179.91,
+        "tax": 15.29,
+        "grand_total": 179.91,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": false
+      },
+      {
+        "order_id": "ORD-91234",
+        "date": "2024-03-26",
+        "customer": "CUST-30456",
+        "items": [
+          {
+            "sku": "PROD-665",
+            "name": "Wireless Speaker",
+            "unit_price": 89.99,
+            "quantity": 5,
+            "discount": {"type": "percentage", "value": 20}
+          }
+        ],
+        "shipping": {
+          "cost": 15.99,
+          "tax_rate": 8.5,
+          "promo_code": null,
+          "discount_value": 0
+        },
+        "status": "Pending",
+        "subtotal": 359.96,
+        "tax": 31.95,
+        "grand_total": 407.90,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": false
+      },
+      {
+        "order_id": "ORD-92345",
+        "date": "2024-03-27",
+        "customer": "CUST-40567",
+        "items": [
+          {
+            "sku": "PROD-778",
+            "name": "Smartphone",
+            "unit_price": 799.99,
+            "quantity": 1,
+            "discount": null
+          },
+          {
+            "sku": "PROD-412",
+            "name": "Smart Watch",
+            "unit_price": 199.99,
+            "quantity": 1,
+            "discount": {"type": "fixed", "value": 30}
+          }
+        ],
+        "shipping": {
+          "cost": 0.00,
+          "tax_rate": 8.5,
+          "promo_code": "FREESHIP50",
+          "discount_value": 19.99
+        },
+        "status": "Shipped",
+        "subtotal": 969.98,
+        "tax": 82.45,
+        "grand_total": 969.98,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": true
+      },
+      {
+        "order_id": "ORD-93456",
+        "date": "2024-03-28",
+        "customer": "CUST-50678",
+        "items": [
+          {
+            "sku": "PROD-223",
+            "name": "Gaming Laptop",
+            "unit_price": 1299.99,
+            "quantity": 1,
+            "discount": {"type": "percentage", "value": 8}
+          }
+        ],
+        "shipping": {
+          "cost": 0.00,
+          "tax_rate": 8.5,
+          "promo_code": "FREESHIP100",
+          "discount_value": 29.99
+        },
+        "status": "Processing",
+        "subtotal": 1195.99,
+        "tax": 101.66,
+        "grand_total": 1195.99,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": true
+      },
+      {
+        "order_id": "ORD-94567",
+        "date": "2024-03-29",
+        "customer": "CUST-60789",
+        "items": [
+          {
+            "sku": "PROD-887",
+            "name": "4K TV 55\"",
+            "unit_price": 599.99,
+            "quantity": 2,
+            "discount": {"type": "percentage", "value": 10}
+          }
+        ],
+        "shipping": {
+          "cost": 29.99,
+          "tax_rate": 8.5,
+          "promo_code": null,
+          "discount_value": 0
+        },
+        "status": "Pending",
+        "subtotal": 1079.98,
+        "tax": 94.35,
+        "grand_total": 1204.32,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": true
+      },
+      {
+        "order_id": "ORD-95678",
+        "date": "2024-03-30",
+        "customer": "CUST-70890",
+        "items": [
+          {
+            "sku": "PROD-334",
+            "name": "Monitor 27\"",
+            "unit_price": 249.99,
+            "quantity": 3,
+            "discount": {"type": "fixed", "value": 50}
+          }
+        ],
+        "shipping": {
+          "cost": 12.99,
+          "tax_rate": 8.5,
+          "promo_code": "SHIP10",
+          "discount_value": 1.30
+        },
+        "status": "Shipped",
+        "subtotal": 699.97,
+        "tax": 60.60,
+        "grand_total": 713.56,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": true
+      },
+      {
+        "order_id": "ORD-96789",
+        "date": "2024-03-31",
+        "customer": "CUST-80901",
+        "items": [
+          {
+            "sku": "PROD-721",
+            "name": "Bluetooth Headphones",
+            "unit_price": 129.99,
+            "quantity": 4,
+            "discount": {"type": "percentage", "value": 15}
+          }
+        ],
+        "shipping": {
+          "cost": 0.00,
+          "tax_rate": 8.5,
+          "promo_code": "FREESHIP50",
+          "discount_value": 14.99
+        },
+        "status": "Processing",
+        "subtotal": 441.97,
+        "tax": 37.57,
+        "grand_total": 441.97,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": false
+      },
+      {
+        "order_id": "ORD-97890",
+        "date": "2024-04-01",
+        "customer": "CUST-91012",
+        "items": [
+          {
+            "sku": "PROD-901",
+            "name": "DSLR Camera",
+            "unit_price": 899.99,
+            "quantity": 1,
+            "discount": null
+          }
+        ],
+        "shipping": {
+          "cost": 19.99,
+          "tax_rate": 8.5,
+          "promo_code": null,
+          "discount_value": 0
+        },
+        "status": "Pending",
+        "subtotal": 899.99,
+        "tax": 78.20,
+        "grand_total": 998.18,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": true
+      },
+      {
+        "order_id": "ORD-98901",
+        "date": "2024-04-02",
+        "customer": "CUST-01123",
+        "items": [
+          {
+            "sku": "PROD-445",
+            "name": "Tablet",
+            "unit_price": 349.99,
+            "quantity": 2,
+            "discount": {"type": "percentage", "value": 10}
+          }
+        ],
+        "shipping": {
+          "cost": 9.99,
+          "tax_rate": 8.5,
+          "promo_code": "SHIP15",
+          "discount_value": 1.50
+        },
+        "status": "Shipped",
+        "subtotal": 629.98,
+        "tax": 54.40,
+        "grand_total": 634.37,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": true
+      },
+      {
+        "order_id": "ORD-99012",
+        "date": "2024-04-03",
+        "customer": "CUST-11234",
+        "items": [
+          {
+            "sku": "PROD-112",
+            "name": "HDMI Cable",
+            "unit_price": 19.99,
+            "quantity": 20,
+            "discount": {"type": "percentage", "value": 40}
+          }
+        ],
+        "shipping": {
+          "cost": 0.00,
+          "tax_rate": 8.5,
+          "promo_code": "FREESHIP100",
+          "discount_value": 9.99
+        },
+        "status": "Processing",
+        "subtotal": 239.88,
+        "tax": 20.39,
+        "grand_total": 239.88,
+        "profit_margin": 30.0,
+        "bulk_discount_applied": false
+      }
+    ],
+    "inventory": {
+      "PROD-665": 0,
+      "PROD-721": 87,
+      "PROD-412": 56,
+      "PROD-887":  2,
+      "PROD-556": 210,
+      "PROD-223": 18,
+      "PROD-778": 25,
+      "PROD-445": 42,
+      "PROD-334": 39,
+      "PROD-901": 15,
+      "PROD-112": 500
+    },
+    "promo_codes": {
+      "FREESHIP50": {"type": "percentage", "value": 50},
+      "FREESHIP100": {"type": "fixed", "value": "full"},
+      "SHIP10": {"type": "fixed", "value": 10},
+      "SHIP15": {"type": "percentage", "value": 15}
+    }
+  }
+}

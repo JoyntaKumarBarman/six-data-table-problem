@@ -1,4 +1,5 @@
 import {Toast} from "primereact/toast";
+import {Material} from "../type";
 
 
 export default function callToast(
@@ -15,4 +16,9 @@ export default function callToast(
             life: life,
         });
     }
+}
+
+export const getTotalMaterial = (material: Material) => {
+    const {units_required, waste_factor}= material;
+    return units_required * (1 + waste_factor);
 }

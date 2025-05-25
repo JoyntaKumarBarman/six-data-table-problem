@@ -1,0 +1,585 @@
+{
+  "organization": {
+    "departments": [
+      {
+        "dept_id": "D-IT",
+        "name": "Information Technology",
+        "head_count": 15,
+        "teams": [
+          {
+            "team_id": "T-INFRA",
+            "members": [
+              {
+                "employee_id": "E-1001",
+                "name": "Sarah Johnson",
+                "role": "Network Engineer",
+                "skills": ["AWS", "Cisco", "Python"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-01",
+                    "name": "Cloud Migration",
+                    "status": "Behind Schedule",
+                    "completion": 65
+                  },{
+                    "project_id": "P-2024-01",
+                    "name": "Cloud Migration",
+                    "status": "Behind Schedule",
+                    "completion": 65
+                  }
+                ]
+              },
+              {
+                "employee_id": "E-1001",
+                "name": "Sarah Johnson",
+                "role": "Network Engineer",
+                "skills": ["AWS", "Cisco", "Python"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-01",
+                    "name": "Cloud Migration",
+                    "status": "Behind Schedule",
+                    "completion": 10
+                  }
+                ]
+              }
+            ],
+            "budget": 250000
+          },
+          {
+            "team_id": "T-INFRN",
+            "members": [
+              {
+                "employee_id": "E-1001",
+                "name": "Sarah Johnson",
+                "role": "Network Engineer",
+                "skills": ["AWS", "Cisco", "Python"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-01",
+                    "name": "Cloud Migration",
+                    "status": "Behind Schedule",
+                    "completion": 65
+                  }
+                ]
+              }
+            ],
+            "budget": 250000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-HR",
+        "name": "Human Resources",
+        "head_count": 12,
+        "teams": [
+          {
+            "team_id": "T-RECRUIT",
+            "members": [
+              {
+                "employee_id": "E-2001",
+                "name": "Michael Chen",
+                "role": "Recruiter",
+                "skills": ["Talent Acquisition", "Interviewing", "ATS"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-02",
+                    "name": "Campus Hiring",
+                    "status": "On Track",
+                    "completion": 40
+                  }
+                ]
+              }
+            ],
+            "budget": 180000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-FIN",
+        "name": "Finance",
+        "head_count": 8,
+        "teams": [
+          {
+            "team_id": "T-AP",
+            "members": [
+              {
+                "employee_id": "E-3001",
+                "name": "Emily Rodriguez",
+                "role": "Accountant",
+                "skills": ["QuickBooks", "GAAP", "Excel"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-03",
+                    "name": "Tax Filing",
+                    "status": "Completed",
+                    "completion": 100
+                  }
+                ]
+              }
+            ],
+            "budget": 150000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-MKT",
+        "name": "Marketing",
+        "head_count": 10,
+        "teams": [
+          {
+            "team_id": "T-DIGITAL",
+            "members": [
+              {
+                "employee_id": "E-4001",
+                "name": "David Kim",
+                "role": "Digital Marketer",
+                "skills": ["SEO", "Google Ads", "Analytics"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-04",
+                    "name": "Rebranding Campaign",
+                    "status": "Delayed",
+                    "completion": 30
+                  }
+                ]
+              }
+            ],
+            "budget": 300000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-SALES",
+        "name": "Sales",
+        "head_count": 20,
+        "teams": [
+          {
+            "team_id": "T-ENTERPRISE",
+            "members": [
+              {
+                "employee_id": "E-5001",
+                "name": "Jessica Williams",
+                "role": "Account Executive",
+                "skills": ["CRM", "Negotiation", "Presentation"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-05",
+                    "name": "Q3 Targets",
+                    "status": "On Track",
+                    "completion": 55
+                  }
+                ]
+              }
+            ],
+            "budget": 450000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-RD",
+        "name": "Research & Development",
+        "head_count": 18,
+        "teams": [
+          {
+            "team_id": "T-PRODUCT",
+            "members": [
+              {
+                "employee_id": "E-6001",
+                "name": "Robert Zhang",
+                "role": "Product Manager",
+                "skills": ["Agile", "UX", "Market Research"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-06",
+                    "name": "New Feature Rollout",
+                    "status": "Behind Schedule",
+                    "completion": 25
+                  }
+                ]
+              }
+            ],
+            "budget": 600000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-OPS",
+        "name": "Operations",
+        "head_count": 14,
+        "teams": [
+          {
+            "team_id": "T-LOGISTICS",
+            "members": [
+              {
+                "employee_id": "E-7001",
+                "name": "Amanda Patel",
+                "role": "Operations Manager",
+                "skills": ["Supply Chain", "Inventory", "Six Sigma"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-07",
+                    "name": "Warehouse Optimization",
+                    "status": "Completed",
+                    "completion": 100
+                  }
+                ]
+              }
+            ],
+            "budget": 350000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-CS",
+        "name": "Customer Support",
+        "head_count": 25,
+        "teams": [
+          {
+            "team_id": "T-TIER1",
+            "members": [
+              {
+                "employee_id": "E-8001",
+                "name": "Thomas Wilson",
+                "role": "Support Specialist",
+                "skills": ["Zendesk", "Troubleshooting", "CRM"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-08",
+                    "name": "Knowledge Base Update",
+                    "status": "On Track",
+                    "completion": 70
+                  }
+                ]
+              }
+            ],
+            "budget": 200000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-LEGAL",
+        "name": "Legal",
+        "head_count": 5,
+        "teams": [
+          {
+            "team_id": "T-COMPLIANCE",
+            "members": [
+              {
+                "employee_id": "E-9001",
+                "name": "Elizabeth Brown",
+                "role": "Corporate Counsel",
+                "skills": ["Contract Law", "Compliance", "Regulations"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-09",
+                    "name": "GDPR Compliance",
+                    "status": "Delayed",
+                    "completion": 45
+                  }
+                ]
+              }
+            ],
+            "budget": 180000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-DS",
+        "name": "Data Science",
+        "head_count": 9,
+        "teams": [
+          {
+            "team_id": "T-ANALYTICS",
+            "members": [
+              {
+                "employee_id": "E-10001",
+                "name": "Daniel Lee",
+                "role": "Data Scientist",
+                "skills": ["Python", "Machine Learning", "SQL"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-10",
+                    "name": "Customer Segmentation",
+                    "status": "On Track",
+                    "completion": 60
+                  }
+                ]
+              }
+            ],
+            "budget": 400000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-DESIGN",
+        "name": "Design",
+        "head_count": 7,
+        "teams": [
+          {
+            "team_id": "T-UX",
+            "members": [
+              {
+                "employee_id": "E-11001",
+                "name": "Olivia Martinez",
+                "role": "UX Designer",
+                "skills": ["Figma", "User Research", "Prototyping"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-11",
+                    "name": "Mobile App Redesign",
+                    "status": "Behind Schedule",
+                    "completion": 20
+                  }
+                ]
+              }
+            ],
+            "budget": 220000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-PR",
+        "name": "Public Relations",
+        "head_count": 6,
+        "teams": [
+          {
+            "team_id": "T-MEDIA",
+            "members": [
+              {
+                "employee_id": "E-12001",
+                "name": "Christopher Taylor",
+                "role": "PR Specialist",
+                "skills": ["Media Relations", "Crisis Management", "Copywriting"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-12",
+                    "name": "Product Launch Press",
+                    "status": "On Track",
+                    "completion": 50
+                  }
+                ]
+              }
+            ],
+            "budget": 190000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-TRAIN",
+        "name": "Training",
+        "head_count": 4,
+        "teams": [
+          {
+            "team_id": "T-LD",
+            "members": [
+              {
+                "employee_id": "E-13001",
+                "name": "Jennifer Adams",
+                "role": "Training Coordinator",
+                "skills": ["Instructional Design", "eLearning", "Facilitation"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-13",
+                    "name": "New Hire Onboarding",
+                    "status": "Completed",
+                    "completion": 100
+                  }
+                ]
+              }
+            ],
+            "budget": 120000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-SEC",
+        "name": "Security",
+        "head_count": 8,
+        "teams": [
+          {
+            "team_id": "T-INFOSEC",
+            "members": [
+              {
+                "employee_id": "E-14001",
+                "name": "Kevin Nguyen",
+                "role": "Security Analyst",
+                "skills": ["SIEM", "Pen Testing", "Incident Response"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-14",
+                    "name": "Security Audit",
+                    "status": "Delayed",
+                    "completion": 35
+                  }
+                ]
+              }
+            ],
+            "budget": 280000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-FAC",
+        "name": "Facilities",
+        "head_count": 10,
+        "teams": [
+          {
+            "team_id": "T-MAINT",
+            "members": [
+              {
+                "employee_id": "E-15001",
+                "name": "Richard Garcia",
+                "role": "Facilities Manager",
+                "skills": ["HVAC", "Safety Compliance", "Vendor Management"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-15",
+                    "name": "Office Expansion",
+                    "status": "On Track",
+                    "completion": 75
+                  }
+                ]
+              }
+            ],
+            "budget": 320000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-PM",
+        "name": "Product Management",
+        "head_count": 7,
+        "teams": [
+          {
+            "team_id": "T-PRODUCT",
+            "members": [
+              {
+                "employee_id": "E-16001",
+                "name": "Sophia Wilson",
+                "role": "Product Owner",
+                "skills": ["Roadmapping", "Prioritization", "Stakeholder Mgmt"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-16",
+                    "name": "Q4 Feature Planning",
+                    "status": "Behind Schedule",
+                    "completion": 15
+                  }
+                ]
+              }
+            ],
+            "budget": 250000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-QA",
+        "name": "Quality Assurance",
+        "head_count": 9,
+        "teams": [
+          {
+            "team_id": "T-TEST",
+            "members": [
+              {
+                "employee_id": "E-17001",
+                "name": "Brian Thompson",
+                "role": "QA Engineer",
+                "skills": ["Automation", "Selenium", "JIRA"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-17",
+                    "name": "Test Automation Suite",
+                    "status": "On Track",
+                    "completion": 80
+                  }
+                ]
+              }
+            ],
+            "budget": 210000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-BI",
+        "name": "Business Intelligence",
+        "head_count": 6,
+        "teams": [
+          {
+            "team_id": "T-REPORT",
+            "members": [
+              {
+                "employee_id": "E-18001",
+                "name": "Nicole Clark",
+                "role": "BI Analyst",
+                "skills": ["Power BI", "Tableau", "Data Modeling"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-18",
+                    "name": "Executive Dashboard",
+                    "status": "Completed",
+                    "completion": 100
+                  }
+                ]
+              }
+            ],
+            "budget": 230000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-DEV",
+        "name": "Software Development",
+        "head_count": 30,
+        "teams": [
+          {
+            "team_id": "T-BACKEND",
+            "members": [
+              {
+                "employee_id": "E-19001",
+                "name": "Jason Miller",
+                "role": "Senior Developer",
+                "skills": ["Java", "Spring Boot", "Microservices"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-19",
+                    "name": "API Gateway",
+                    "status": "On Track",
+                    "completion": 90
+                  }
+                ]
+              }
+            ],
+            "budget": 800000
+          }
+        ]
+      },
+      {
+        "dept_id": "D-CORP",
+        "name": "Corporate Strategy",
+        "head_count": 3,
+        "teams": [
+          {
+            "team_id": "T-STRAT",
+            "members": [
+              {
+                "employee_id": "E-20001",
+                "name": "Victoria Scott",
+                "role": "Strategy Consultant",
+                "skills": ["Market Analysis", "M&A", "Business Planning"],
+                "projects": [
+                  {
+                    "project_id": "P-2024-20",
+                    "name": "5-Year Plan",
+                    "status": "Delayed",
+                    "completion": 10
+                  }
+                ]
+              }
+            ],
+            "budget": 150000
+          }
+        ]
+      }
+    ]
+  }
+}
