@@ -44,7 +44,7 @@ export default function SecondProblemDataTable() {
 
     // Templates
     const teamIdTemplate = (rowData: Department) => {
-        const teamId = rowData?.teams.map((team: Team) => <Tag severity={'success'} rounded>{team?.team_id}</Tag>)
+        const teamId = rowData?.teams.map((team: Team) => <Tag key={team?.team_id} severity={'success'} rounded>{team?.team_id}</Tag>)
         return <div className={'flex gap-2'}>{teamId}</div>;
     }
 
@@ -67,7 +67,7 @@ export default function SecondProblemDataTable() {
     }
 
     const memberSkillsTemplate = (rowData: Member) => {
-        const skillsBadges = rowData?.skills.map((skill: string) => <Badge value={skill} severity={'success'}/>)
+        const skillsBadges = rowData?.skills.map((skill: string) => <Badge key={skill} value={skill} severity={'success'}/>)
         return <div className={'flex gap-2'} >{skillsBadges}</div>
     }
 
@@ -76,20 +76,40 @@ export default function SecondProblemDataTable() {
         return projectsBadges
     }
 
+    const rowExpansionProjectTemplate = (data: Member) => {
+
+        return (
+            <div className="p-5">
+                <DataTable value={data?.projects} dataKey={'project_id'} emptyMessage="No data found."
+                           header={statusHeader}
+                >
+                    <Column field="project_id" header="Project Id" ></Column>
+                    <Column field="name" header="Name" ></Column>
+                    <Column field="completion" header="Completion" body={(e: Project) => e?.completion + "%"}  ></Column>
+                    <Column field="status" header="Status" style={{minWidth: '12rem'}}></Column>
+                </DataTable>
+            </div>
+        );
+    }
+
     const rowExpansionTeamTemplate = (data: Team) => {
 
         return (
             <div className="p-5">
-                <h5>Member for {data.team_id}</h5>
                 <DataTable value={data?.members} dataKey={'employee_id'} emptyMessage="No data found."
+                           header={header}
+                           expandedRows={expandedTeamRows} onRowToggle={(e) => setExpandedTeamRows(e.data)}
+                           rowExpansionTemplate={rowExpansionProjectTemplate}
 
                 >
+
+                    <Column expander={true} style={{width: '1rem'}}/>
                     <Column field="employee_id" header="Employee Id" ></Column>
                     <Column field="name" header="Name" ></Column>
                     <Column field="role" header="Role" ></Column>
                     <Column field="skills" header="Skills" body={memberSkillsTemplate} style={{minWidth: '12rem'}}></Column>
                     <Column field="projects" header="Projects"  body={memberProjectTemplate} style={{minWidth: '12rem'}}></Column>
-                    {/*<Column field="project" header="Projects"  body={memberProjectTemplate} style={{minWidth: '12rem'}}></Column>*/}
+                    <Column field="project" header="Project Status"  body={memberProjectTemplate} style={{minWidth: '12rem'}}></Column>
                 </DataTable>
             </div>
         );
@@ -101,7 +121,7 @@ export default function SecondProblemDataTable() {
         return (
             <div className="p-5">
                 <h5>Department for {data.name}</h5>
-                <DataTable value={data.teams} dataKey={'team_id'} header={header} emptyMessage="No data found."
+                <DataTable value={data.teams} dataKey={'team_id'} emptyMessage="No data found."
                            expandedRows={expandedTeamRows} onRowToggle={(e) => setExpandedTeamRows(e.data)}
                            rowExpansionTemplate={rowExpansionTeamTemplate}
                            >
@@ -126,6 +146,10 @@ export default function SecondProblemDataTable() {
             placeholder="Filter by Skills"
             className="w-60"
         />
+
+    </div>;
+
+    const statusHeader = <div className="flex gap-3 mb-4">
         <MultiSelect
             value={statusFilter}
             options={allStatuses}
@@ -133,7 +157,7 @@ export default function SecondProblemDataTable() {
             placeholder="Filter by Project Status"
             className="w-60"
         />
-    </div>;
+    </div>
 
 
 

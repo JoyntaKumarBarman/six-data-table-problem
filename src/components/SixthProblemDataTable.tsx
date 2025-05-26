@@ -65,15 +65,16 @@ export default function SixthProblemDataTable() {
         const order = orders?.find((order: FactoryOrder) => order?.product_id === product_id);
         let meterialShortfall = materials.map((material: Material) => {
             const {material_id, waste_factor, units_required} = material;
+            console.log(order)
             if (order) {
                 const totalMaterialNeeded = order?.order_qty * units_required * (1 + waste_factor);
                 const stock = data?.factory?.resources?.[material_id]?.stock!;
                 const shortfall = totalMaterialNeeded - stock;
-                return <p className={'text-red-400'}>{shortfall > 0 && `${material_id}:  ${shortfall.toFixed(2)}`}</p>
+                return <p className={'text-red-400'}>{shortfall > 0 ? `${material_id}:  ${shortfall.toFixed(2)}`:<p className={'text-green-600'}>-</p> }</p>
             } else {
                 {
 
-                    return '';
+                    return <p className={'text-green-600'}>_</p>;
                 }
             }
         })

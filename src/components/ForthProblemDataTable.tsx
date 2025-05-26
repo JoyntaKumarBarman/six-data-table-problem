@@ -22,18 +22,51 @@ export default function ForthProblemDataTable() {
 
 
     //function
-    const getVolatility = (historicalPrices: Historical_price[]) => {
-        const totalPrice = historicalPrices.reduce((total: number, lastPrice: Historical_price) => total + lastPrice?.close,0)
-        const averagePrice = totalPrice/ historicalPrices.length;
-        const differenceFromAveragePrice = historicalPrices.map((historicalPrice: Historical_price) => averagePrice - historicalPrice?.close);
-        const sqrtOfDifferenceFromAveragePrice = differenceFromAveragePrice.map((diffValue: number) => Math.pow(diffValue, 2));
-        const averageOfSquredDifference = sqrtOfDifferenceFromAveragePrice.reduce((total: number, value: number) => total + value, 0 )/sqrtOfDifferenceFromAveragePrice.length;
-        return Math.sqrt(averageOfSquredDifference);
-    }
+    const getVolatility = (historicalPrices: Historical_price[]): number => {
+        if (historicalPrices.length < 2) return 0;
+
+        // Step 1: Calculate daily returns
+        const returns: number[] = [];
+        for (let i = 1; i < historicalPrices.length; i++) {
+            const prev = historicalPrices[i - 1].close;
+            const curr = historicalPrices[i].close;
+            const dailyReturn = (curr - prev) / prev;
+            returns.push(dailyReturn);
+        }
+
+        // Step 2: Calculate mean of returns
+        const meanReturn = returns.reduce((sum, r) => sum + r, 0) / returns.length;
+
+        // Step 3: Calculate variance
+        const squaredDiffs = returns.map(r => Math.pow(r - meanReturn, 2));
+        const variance = squaredDiffs.reduce((sum, d) => sum + d, 0) / (returns.length - 1);
+
+        // Step 4: Volatility = standard deviation of returns
+        const volatility = Math.sqrt(variance);
+        return volatility;
+    };
 
 
 
     // Template
+
+    const previousDayValueTemplate = (rowData: Holdings) => {
+        const {historical_prices, current_price} = rowData;
+
+        const date = new Date();
+        const yesterDay = new Date( date);
+        yesterDay.setDate(yesterDay.getDate() - 1);
+        const formattedDate = yesterDay.toISOString().split("T")[0];
+        console.log();
+        const lastPrice = historical_prices?.find((priceObj: Historical_price) => priceObj?.date === formattedDate);
+        if(lastPrice){
+            return lastPrice?.close;
+        }else {
+
+            return "No last day data."
+        }
+    }
+
     const dailyChangePercentageTemplate = (rowData: Holdings) => {
         const {historical_prices, current_price} = rowData;
 
@@ -97,6 +130,7 @@ return sharpRatio.toFixed(2) + `-${volatility}`;
             >
                 <Column expander={true} style={{width: '1rem'}}/>
                 <Column field="symbol" header="Symbol" style={{minWidth: '12rem'}}/>
+                <Column field="current_price" header="Previous Day Value" body={previousDayValueTemplate}  style={{minWidth: '12rem'}}/>
                 <Column field="current_price" header="Current Value"  style={{minWidth: '12rem'}}/>
                 <Column field="symbol" header="Daily Δ%" body={dailyChangePercentageTemplate} style={{minWidth: '12rem'}}/>
                 <Column field="symbol" header="Sharp Ratio" body={sharpRatioTemplate} style={{minWidth: '12rem'}}/>
