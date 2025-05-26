@@ -399,7 +399,8 @@
         "order_id": "ORD-2024-001",
         "product_id": "MOTOR-X1",
         "order_qty": 500,
-        "due_date": "2024-05-30",
+        "due_date": "2025-05-21",
+
         "status": "in_production",
         "priority": "high"
       },
@@ -447,7 +448,7 @@
         "order_id": "ORD-2024-007",
         "product_id": "ACTUATOR-C7",
         "order_qty": 350,
-        "due_date": "2024-05-28",
+        "due_date": "2025-05-28",
         "status": "urgent",
         "priority": "high"
       },

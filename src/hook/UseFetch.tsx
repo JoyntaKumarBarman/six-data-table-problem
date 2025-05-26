@@ -25,7 +25,7 @@ const useFetch = (url: string): {data: any; isLoading: boolean; hasError: boolea
             }
         };
 
-        fetchData();
+        fetchData().then();
     }, [url]);
 
     return {data, isLoading, hasError};

@@ -110,6 +110,35 @@ export type Item = {
     "discount": Discount
 }
 
+// Problem five
+export type Holdings = {
+    "asset_id": string;
+    "symbol": string;
+    "name": string;
+    "transactions": Transaction[],
+    "current_price": number;
+    "historical_prices": Historical_price[],
+    "portfolio_percentage": number;
+    "daily_return": number;
+    "volatility_30d": number;
+}
+
+export type Benchmarks = {
+    "sp500_return": number;
+    "risk_free_rate": number;
+    "volatility": number;
+}
+
+export type Transaction = {
+    "date": string;
+    "type": string;
+    "quantity": number;
+    "price": number;
+    "fee": number;
+}
+
+export type Historical_price =  {"date": string; "close": number;}
+
 // problem six
 export type FactoryProduct = {
     "product_id": string;

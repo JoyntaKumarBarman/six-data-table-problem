@@ -39,18 +39,19 @@ export default function ThirdProblemDataTable() {
     };
 
     const enrolmentStatusSortableFunction = (e: ColumnSortEvent) => {
-        // e.data.sort((a: Course, b: Course) => {
-        //     const { enrollment: { current: aCurrent, capacity: aCapacity } } = a;
-        //     const { enrollment: { current: bCurrent, capacity: bCapacity } } = b;
-        //
-        //     const percentageA = (aCurrent / aCapacity) * 100;
-        //     const percentageB = (bCurrent / bCapacity) * 100;
-        //
-        //     console.log((percentageA - percentageB) * e.order!)
-        //
-        //     return (percentageA - percentageB) * e.order!;  // Ascending if order = 1, descending if order = -1
-        // });
+        if (!e.data || !e.field) return;
+        return e.data.sort((a: Course, b: Course) => {
+            const { current: aCurrent, capacity: aCapacity } = a.enrollment;
+            const { current: bCurrent, capacity: bCapacity } = b.enrollment;
+
+            const percentageA = (aCurrent / aCapacity) * 100;
+            const percentageB = (bCurrent / bCapacity) * 100;
+
+            return (percentageA - percentageB) * (e.order ?? 1);
+
+        });
     };
+
 
     const prerequisitesTemplate = (rowData: Course) => {
         const {prerequisites} = rowData;
@@ -125,8 +126,8 @@ export default function ThirdProblemDataTable() {
                 <Column field="course_code" header="Course Code" style={{minWidth: '12rem'}}/>
                 <Column field="title" header="Title" style={{minWidth: '12rem'}}/>
                 <Column field="instructor" header="Instructor" style={{minWidth: '12rem'}}/>
-                <Column field="enrollment" header="Enrollment Status" body={enrollmentStatusTemplate} sortable
-                         style={{minWidth: '12rem'}}/>
+                <Column field="enrollment.current" header="Enrollment Status" body={enrollmentStatusTemplate} sortable
+                        sortFunction={enrolmentStatusSortableFunction} style={{minWidth: '12rem'}}/>
                 <Column field="status" header="Status" body={statusPillTemplate} filter
                         filterElement={statusFilterTemplate} style={{minWidth: '2rem'}}/>
                 <Column field="status" header="Wait List" body={waitListTemplate} style={{minWidth: '5rem'}}/>

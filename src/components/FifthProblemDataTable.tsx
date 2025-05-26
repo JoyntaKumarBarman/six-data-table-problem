@@ -49,7 +49,7 @@ export default function FifthProblemDataTable() {
             let discountUnitPrice = 0;
 
             if(discountUnitPercentage){
-               discountUnitPrice = unit_price - ((unit_price / 100) * discountUnitPercentage);
+                discountUnitPrice = unit_price - ((unit_price / 100) * discountUnitPercentage);
             } else {
                 discountUnitPrice = unit_price - fixedDiscount;
             }
@@ -179,4 +179,3 @@ export default function FifthProblemDataTable() {
         </div>
     );
 }
-

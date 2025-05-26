@@ -187,6 +187,18 @@ export default function SixthProblemDataTable() {
         return (stock/(units_required * (1 + waste_factor))).toFixed(2);
     }
 
+    const reorderStatusTemplate = (rowData: Material, product_id: string) => {
+        const order = getOrder(product_id);
+       const {material_id} = rowData;
+       const {lead_time} = getResources(material_id);
+        const today = new Date()
+        const dueDate = new Date(order?.due_date!)
+        const daysUntilDueDays = Math.ceil((dueDate.getTime() - today.getTime())/(1000* 60 * 60 * 24));
+        const reorderStatus = lead_time > Math.abs(daysUntilDueDays);
+
+        return reorderStatus ? <i className={'pi pi-exclamation-triangle text-yellow-600'} style={{ fontSize: '1.5rem' }}>Yes</i> : "No"
+    }
+
     const rowExpansionTemplate = (data: FactoryProduct) => {
         const {product_id} = data;
         return (
@@ -206,7 +218,7 @@ export default function SixthProblemDataTable() {
                     <Column field="budget" header="Stock Coverage"
                             body={(e) => stockCoverageTemplate(e, product_id)}></Column>
                     <Column field="budget" header="Status" body={(e) => statusTemplate(e, product_id)}></Column>
-                    <Column field="budget" header="Reorder Alert"></Column>
+                    <Column field="budget" header="Reorder Alert" body={(e) => reorderStatusTemplate(e, product_id)}></Column>
                     <Column field="budget" header="Max Production(unit)" body={maxProductionTemplate}></Column>
                 </DataTable>
             </div>
@@ -239,4 +251,5 @@ export default function SixthProblemDataTable() {
         </div>
     );
 }
+
 
